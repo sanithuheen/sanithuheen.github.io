@@ -6,6 +6,17 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var
 .site-header{background-image:linear-gradient(rgba(11,110,253,0.24),rgba(11,110,253,0.04)),url('assets/hero.jpg');background-size:cover;background-position:center;color:#000;padding:48px 0;min-height:320px}
 .header-inner{display:flex;gap:24px;align-items:center;background:transparent}
 .avatar{width:260px;height:300px;object-fit:cover;object-position:center top;background:transparent;border:2px solid rgba(0,0,0,0.06);border-radius:12px;padding:0;display:block}
+
+/* subtle idle float animation and hover effect */
+@keyframes avatarFloat{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.005)}100%{transform:translateY(0) scale(1)}}
+.avatar{will-change:transform;transition:transform .28s ease, box-shadow .2s ease;animation:avatarFloat 6s ease-in-out infinite}
+.avatar:hover{transform:translateY(-4px) scale(1.03);animation-play-state:paused;box-shadow:0 8px 20px rgba(15,15,15,0.08)}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .avatar{animation:none;transition:none}
+}
+
 .name{margin:0;font-weight:800;font-size:32px;font-family:Merriweather,serif;color:#000}
 .tagline{margin:6px 0;color:#111;font-weight:600}
 .meta{color:#111;font-size:14px;margin:0}
