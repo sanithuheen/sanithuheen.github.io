@@ -2,10 +2,16 @@
 *{box-sizing:border-box}
 body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#111;margin:0;line-height:1.5}
 .container{max-width:900px;margin:0 auto;padding:28px}
-.site-header{background:linear-gradient(90deg,rgba(11,110,253,0.06),transparent);padding:36px 0 24px}
-.name{margin:0;font-weight:700;font-size:30px}
+.site-header{background:linear-gradient(90deg,rgba(11,110,253,0.06),transparent);padding:24px 0}
+.header-inner{display:flex;gap:16px;align-items:center}
+.avatar{width:72px;height:72px;border-radius:10px;object-fit:cover;border:2px solid rgba(0,0,0,0.06)}
+.name{margin:0;font-weight:700;font-size:28px}
 .tagline{margin:6px 0;color:var(--muted)}
-.links a{margin-right:14px;color:var(--accent);text-decoration:none}
+.meta{color:var(--muted);font-size:14px;margin:0}
+.nav{padding:8px 0}
+.nav a{margin-right:14px;color:var(--accent);text-decoration:none}
 .card{background:var(--card);padding:20px;border-radius:8px;margin:20px 0;box-shadow:0 1px 4px rgba(15,15,15,0.04)}
+.projects-list{padding-left:18px}
 .site-footer{text-align:center;padding:28px;color:var(--muted)}
+.btn{display:inline-block;padding:8px 12px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none}
 @media(min-width:900px){.name{font-size:36px}}
