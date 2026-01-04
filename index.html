@@ -31,9 +31,19 @@
       <p>I'm a Computer Engineering and Applied Mathematics student at Brown. I work at the intersection of AI, quantum computing, and embedded systems, and I enjoy building reproducible research and tooling.</p>
     </section>
 
-    <section id="research" class="card">
+    <section id="research" class="card" data-reveal>
       <h2>Research</h2>
       <p>Interests include 3D vision, deep learning, optimization, quantum computing, and systems for scientific experiments.</p>
+    </section>
+
+    <section id="experience" class="card" data-reveal>
+      <h2>Experience & Education</h2>
+      <h3>Education</h3>
+      <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics (in progress)</p>
+      <h3>Experience</h3>
+      <ul>
+        <li>Research & project work in AI, embedded systems, and quantum computing — see <a href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf">resume (PDF)</a> for details.</li>
+      </ul>
     </section>
 
     <section id="projects" class="card">
@@ -52,11 +62,12 @@
       <p>Selected publications and preprints (add details and PDFs here).</p>
     </section>
 
-    <section id="contact" class="card">
+    <section id="contact" class="card" data-reveal>
       <h2>Contact</h2>
       <p>For collaborations, email <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a> or connect on <a href="https://www.linkedin.com/in/sanithu-heengama/">LinkedIn</a>.</p>
-      <p><a class="btn" href="https://github.com/sanithuheen">View my GitHub profile</a></p>
+      <p><a class="btn" href="https://github.com/sanithuheen">View my GitHub profile</a> <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download resume (PDF)</a></p>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -65,6 +76,11 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    // small reveal-on-scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target)}});
+    },{threshold:0.1});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>

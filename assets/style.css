@@ -1,17 +1,23 @@
-﻿:root{--bg:#f8f7f5;--muted:#6b6b6b;--accent:#0b6efd;--card:#ffffff}
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700&display=swap');
+:root{--bg:#faf9f8;--muted:#6b6b6b;--accent:#0b6efd;--card:#ffffff}
 *{box-sizing:border-box}
-body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#111;margin:0;line-height:1.5}
-.container{max-width:900px;margin:0 auto;padding:28px}
-.site-header{background:linear-gradient(90deg,rgba(11,110,253,0.06),transparent);padding:24px 0}
-.header-inner{display:flex;gap:16px;align-items:center}
-.avatar{width:72px;height:72px;border-radius:10px;object-fit:cover;border:2px solid rgba(0,0,0,0.06)}
-.name{margin:0;font-weight:700;font-size:28px}
-.tagline{margin:6px 0;color:var(--muted)}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#111;margin:0;line-height:1.6}
+.container{max-width:880px;margin:0 auto;padding:32px}
+.site-header{background:linear-gradient(90deg,rgba(11,110,253,0.04),transparent);padding:28px 0;border-bottom:1px solid rgba(0,0,0,0.04)}
+.header-inner{display:flex;gap:18px;align-items:center}
+.avatar{width:84px;height:84px;border-radius:12px;object-fit:cover;border:2px solid rgba(0,0,0,0.06)}
+.name{margin:0;font-weight:800;font-size:32px;font-family:Merriweather,serif}
+.tagline{margin:6px 0;color:var(--muted);font-weight:600}
 .meta{color:var(--muted);font-size:14px;margin:0}
-.nav{padding:8px 0}
-.nav a{margin-right:14px;color:var(--accent);text-decoration:none}
-.card{background:var(--card);padding:20px;border-radius:8px;margin:20px 0;box-shadow:0 1px 4px rgba(15,15,15,0.04)}
-.projects-list{padding-left:18px}
-.site-footer{text-align:center;padding:28px;color:var(--muted)}
-.btn{display:inline-block;padding:8px 12px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none}
-@media(min-width:900px){.name{font-size:36px}}
+.nav{padding:12px 0}
+.nav a{margin-right:16px;color:var(--accent);text-decoration:none;font-weight:600}
+.card{background:var(--card);padding:26px;border-radius:10px;margin:24px 0;box-shadow:0 4px 14px rgba(15,15,15,0.06);transition:transform .35s ease,color .25s}
+.card h2{font-family:Merriweather,serif;margin-top:0}
+.projects-list{padding-left:18px;margin:0}
+.site-footer{text-align:center;padding:36px;color:var(--muted)}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+.btn-outline{background:transparent;color:var(--accent);border:1px solid rgba(11,110,253,0.14);margin-left:12px}
+/* reveal animations */
+[data-reveal]{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
+[data-reveal].visible{opacity:1;transform:none}
+@media(min-width:900px){.name{font-size:44px}}
