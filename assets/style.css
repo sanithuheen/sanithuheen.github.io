@@ -3,9 +3,9 @@
 *{box-sizing:border-box}
 body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#111;margin:0;line-height:1.6}
 .container{max-width:880px;margin:0 auto;padding:32px}
-.site-header{background-image:linear-gradient(rgba(11,110,253,0.24),rgba(11,110,253,0.04)),url('assets/hero.jpg');background-size:cover;background-position:center;color:#fff;padding:48px 0;min-height:260px}
-.header-inner{display:flex;gap:18px;align-items:center;background:transparent}
-.avatar{width:84px;height:84px;border-radius:12px;object-fit:cover;border:2px solid rgba(0,0,0,0.06)}
+.site-header{background-image:linear-gradient(rgba(11,110,253,0.24),rgba(11,110,253,0.04)),url('assets/hero.jpg');background-size:cover;background-position:center;color:#fff;padding:48px 0;min-height:320px}
+.header-inner{display:flex;gap:24px;align-items:center;background:transparent}
+.avatar{width:120px;height:120px;border-radius:16px;object-fit:cover;border:2px solid rgba(0,0,0,0.06)}
 .name{margin:0;font-weight:800;font-size:32px;font-family:Merriweather,serif;color:#fff}
 .tagline{margin:6px 0;color:var(--muted);font-weight:600}
 .meta{color:var(--muted);font-size:14px;margin:0}
@@ -21,4 +21,4 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var
 [data-reveal]{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
 [data-reveal].visible{opacity:1;transform:none}
 @media(min-width:900px){.name{font-size:44px}}
-@media(max-width:600px){.site-header{min-height:160px;padding:22px 0}.avatar{width:64px;height:64px}}
+@media(max-width:600px){.site-header{min-height:220px;padding:22px 0}.avatar{width:96px;height:96px}}
