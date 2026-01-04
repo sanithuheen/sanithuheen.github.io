@@ -8,13 +8,27 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var
 .avatar{width:260px;height:300px;object-fit:cover;object-position:center top;background:transparent;border:2px solid rgba(0,0,0,0.06);border-radius:12px;padding:0;display:block}
 
 /* subtle idle float animation and hover effect */
-@keyframes avatarFloat{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.005)}100%{transform:translateY(0) scale(1)}}
+@keyframes avatarFloat{0%{transform:translate(0,0) rotate(0deg) scale(1)}25%{transform:translate(-4px,-8px) rotate(-0.6deg) scale(1.003)}50%{transform:translate(6px,-10px) rotate(0.8deg) scale(1.006)}75%{transform:translate(-4px,-8px) rotate(-0.4deg) scale(1.003)}100%{transform:translate(0,0) rotate(0deg) scale(1)}}
 .avatar{will-change:transform;transition:transform .28s ease, box-shadow .2s ease;animation:avatarFloat 6s ease-in-out infinite}
-.avatar:hover{transform:translateY(-4px) scale(1.03);animation-play-state:paused;box-shadow:0 8px 20px rgba(15,15,15,0.08)}
+.avatar:hover{transform:translateY(-6px) scale(1.04);animation-play-state:running;box-shadow:0 12px 30px rgba(15,15,15,0.10)}
+
+/* wrapper for border / ripple effects */
+.avatar-wrap{position:relative;display:inline-block;border-radius:14px;padding:4px}
+.avatar-wrap::before{content:'';position:absolute;inset:0;border-radius:16px;pointer-events:none;box-shadow:0 0 0 0 rgba(11,110,253,0);transition:box-shadow .28s ease, transform .28s ease}
+.avatar-wrap:hover::before{box-shadow:0 10px 30px rgba(11,110,253,0.08)}
+
+/* continuous ripple while hovered */
+.avatar-wrap::after{content:'';position:absolute;left:50%;top:50%;width:100%;height:100%;transform:translate(-50%,-50%) scale(1);border-radius:16px;pointer-events:none;opacity:0}
+.avatar-wrap:hover::after{animation:ripple 1.6s ease-out infinite}
+@keyframes ripple{0%{opacity:0.32;transform:translate(-50%,-50%) scale(0.98);box-shadow:0 0 0 0 rgba(11,110,253,0.14)}60%{opacity:0.12;box-shadow:0 0 0 18px rgba(11,110,253,0)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.08);box-shadow:0 0 0 36px rgba(11,110,253,0)}}
+
+/* smaller tweak for mobile */
+@media(max-width:600px){.site-header{min-height:280px;padding:22px 0}.avatar{width:190px;height:260px;border-radius:12px;padding:0}.avatar-wrap{padding:3px}}
 
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce){
   .avatar{animation:none;transition:none}
+  .avatar-wrap::after{animation:none}
 }
 
 .name{margin:0;font-weight:800;font-size:32px;font-family:Merriweather,serif;color:#000}
@@ -32,4 +46,3 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var
 [data-reveal]{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
 [data-reveal].visible{opacity:1;transform:none}
 @media(min-width:900px){.name{font-size:44px}}
-@media(max-width:600px){.site-header{min-height:280px;padding:22px 0}.avatar{width:190px;height:260px;border-radius:12px;padding:0}}
