@@ -1,10 +1,28 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sanithu D. Heengama — Portfolio</title>
   <link rel="stylesheet" href="assets/style.css">
+  <!-- Added Font Awesome for Logos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Styling for social icons to make them look clean */
+    .social-icon {
+      font-size: 1.2rem;
+      margin-right: 8px;
+      vertical-align: middle;
+      color: inherit;
+      text-decoration: none;
+    }
+    .social-icon:hover {
+      color: #0077b5; /* LinkedIn Blue on hover */
+    }
+    .github-icon:hover {
+      color: #333; /* GitHub Black on hover */
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -14,8 +32,16 @@
       </div>
       <div>
         <h1 class="name">Sanithu D. Heengama</h1>
-        <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown — Research Assitant/p>
-        <p class="meta">Providence, RI • <a href="https://github.com/sanithuheen">@sanithuheen</a> • <a href="https://www.linkedin.com/in/sanithu-heengama/">LinkedIn</a></p>
+        <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown — Research Assistant</p>
+        <p class="meta">
+          Providence, RI • 
+          <a href="https://github.com/sanithuheen" class="social-icon github-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a> • 
+          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </p>
       </div>
     </div>
     <nav class="nav container">
@@ -30,17 +56,17 @@
   <main class="container">
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics, and a researcher in Brown Visual Computing and Interactive 3D Vision and Learning Lab and Engineering Man/Machine Systems (LEMS).</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics, and a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
     </section>
 
     <section id="research" class="card" data-reveal>
       <h2>Research & Projects</h2>
       <ul>
-        <li><strong>Esophageal Manometry Redesign</strong> (Sept 2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device (sensing, embedded electronics, UX, manufacturability, validation).</li>
-        <li><strong>LPS Qubit Collaboratory</strong> (July–Aug 2025) — Intensive quantum circuits and algorithms program; certification in qubit technologies.</li>
-        <li><strong>IEEE SSCS & Chipathon</strong> (2025) — Analog/digital circuit design on GF180 PDK with open-source EDA tooling and LLM-guided workflows; tape-out work.</li>
-        <li><strong>Radiance Fields & 3D Vision</strong> — Work on Gaussian splatting and NeRF-style representations for computer vision.</li>
-        <li><strong>Esoteric project links:</strong> <a href="https://doi.org/10.59720/23-024">JEI paper on IoT air quality monitoring</a>.</li>
+        <li><strong>Esophageal Manometry Redesign</strong> (Sept 2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device.</li>
+        <li><strong>LPS Qubit Collaboratory</strong> (July–Aug 2025) — Intensive quantum circuits and algorithms program.</li>
+        <li><strong>IEEE SSCS & Chipathon</strong> (2025) — Analog/digital circuit design on GF180 PDK using open-source EDA tools and LLM-guided workflows.</li>
+        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and NeRF-style representations.</li>
+        <li><strong>IoT Publication:</strong> <a href="https://doi.org/10.59720/23-024">JEI paper on indoor air quality monitoring</a>.</li>
       </ul>
     </section>
     
@@ -48,44 +74,45 @@
       <h2>Work & Teaching</h2>
       <ul>
         <li><strong>Sprint UTRA Research Fellow</strong> — May 2025–Present, Brown University.</li>
-        <li><strong>Engineering TA / Grader</strong> — Aug 2024–May 2025, Brown University. Delivered weekly recitations on Newtonian dynamics and MATLAB to 30+ students.</li>
-        <li><strong>Engineering Research Intern</strong> — June–Aug 2024, Dexwet Holding (Vienna): Designed and developed nine IoT air-quality monitor prototypes, performed statistical analysis and predictive modeling in MATLAB.</li>
+        <li><strong>Engineering TA / Grader</strong> — Aug 2024–May 2025, Brown University. Delivered weekly recitations on MATLAB and Dynamics.</li>
+        <li><strong>Engineering Research Intern</strong> — June–Aug 2024, Dexwet Holding (Vienna): IoT air-quality monitor development.</li>
       </ul>
     </section>
 
     <section id="publications" class="card" data-reveal>
       <h2>Publications</h2>
       <ul>
-        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (Accepted Sep 05, 2023). DOI: <a href="https://doi.org/10.59720/23-024">10.59720/23-024</a>.</li>
-        <li>Other preprints and student projects — see <a href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf">downloadable CV</a> for a full list.</li>
+        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (Accepted Sep 05, 2023).</li>
+        <li>Other projects — see <a href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf">downloadable CV</a>.</li>
       </ul>
     </section>
 
     <section id="education" class="card" data-reveal>
       <h2>Education</h2>
-      <p><strong>Brown University</strong> — Sc.B. Computer Engineering (ABET) & Applied Mathematics, Aug 2023–May 2027 (GPA: 3.9/4.0). Relevant: Quantum Mechanics, ML, Computational Mathematics, Deep Learning, Computer Vision.</p>
-      <p><strong>Colombo International School</strong> — Graduated Aug 2023 (A*/A-levels: 4×A*, IGCSE 10×A*). Awards: 2× International Scholars with Honors, 2× Pearson Edexcel Excellence Awards, TIMO 2024 (Bronze), HKIMO 2023/24 (World Star/Medals).</p>
+      <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics, 2023–2027 (GPA: 3.9/4.0).</p>
+      <p><strong>Colombo International School</strong> — Graduated 2023 (4×A* at A-level). TIMO 2024 (Bronze), HKIMO 2023/24 (World Star).</p>
     </section>
     
     <section id="contact" class="card" data-reveal>
       <h2>Contact</h2>
-      <p>For collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a>. Connect: <a href="https://www.linkedin.com/in/sanithu-heengama/">LinkedIn</a> • <a href="https://github.com/sanithuheen">GitHub</a>.</p>
-      <p>
-        <a class="btn" href="https://github.com/sanithuheen">View my GitHub profile</a>
-        <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download resume (PDF)</a>
-        <a class="btn btn-outline" href="resume.html">View HTML resume</a>
+      <p>Collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
+      <div style="margin-top: 15px;">
+        <a class="social-icon github-icon" href="https://github.com/sanithuheen"><i class="fab fa-github fa-2x"></i></a>
+        <a class="social-icon" href="https://www.linkedin.com/in/sanithu-heengama/"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p style="margin-top: 20px;">
+        <a class="btn" href="https://github.com/sanithuheen">View GitHub</a>
+        <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download CV (PDF)</a>
       </p>
     </section>
-
   </main>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Sanithu D. Heengama — Built with a minimal starter</div>
+    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // small reveal-on-scroll
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target)}});
     },{threshold:0.1});
