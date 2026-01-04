@@ -5,7 +5,7 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var
 .container{max-width:880px;margin:0 auto;padding:32px}
 .site-header{background-image:linear-gradient(rgba(11,110,253,0.24),rgba(11,110,253,0.04)),url('assets/hero.jpg');background-size:cover;background-position:center;color:#000;padding:48px 0;min-height:320px}
 .header-inner{display:flex;gap:24px;align-items:center;background:transparent}
-.avatar{width:160px;height:200px;object-fit:cover;border:2px solid rgba(0,0,0,0.06);border-radius:50%/40%}
+.avatar{width:160px;height:200px;object-fit:cover;border:2px solid rgba(0,0,0,0.06);border-radius:16px}
 .name{margin:0;font-weight:800;font-size:32px;font-family:Merriweather,serif;color:#000}
 .tagline{margin:6px 0;color:#111;font-weight:600}
 .meta{color:#111;font-size:14px;margin:0}
@@ -21,4 +21,4 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var
 [data-reveal]{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
 [data-reveal].visible{opacity:1;transform:none}
 @media(min-width:900px){.name{font-size:44px}}
-@media(max-width:600px){.site-header{min-height:220px;padding:22px 0}.avatar{width:120px;height:150px;border-radius:50%/40%}}
+@media(max-width:600px){.site-header{min-height:220px;padding:22px 0}.avatar{width:120px;height:150px;border-radius:16px}}
