@@ -15,6 +15,17 @@
     .small{font-size:14px;color:var(--muted)}
     @media(max-width:880px){.two-col{grid-template-columns:1fr}}
     .cv-download{margin-top:8px}
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+    .social-icons a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+    .social-icons img{width:20px;height:20px;vertical-align:middle;margin-right:10px;filter:grayscale(100%);transition:filter .18s ease, transform .15s ease}
+    .social-icons a:hover img{filter:none;transform:scale(1.06)}
   </style>
 </head>
 <body>
@@ -24,12 +35,6 @@
 
     <div class="two-col">
       <div>
-        <section class="section">
-          <h2>Education</h2>
-          <p><strong>Brown University</strong> — Sc.B. in Computer Engineering (ABET) & Applied Mathematics (GPA: 3.9/4.0). Relevant: Quantum Mechanics, ML, Computational Mathematics, Deep Learning, Computer Vision.</p>
-          <p><strong>Colombo International School</strong> — Graduated Aug 2023; IGCSE/AS/A2 scores: 4×A* at A-level; 10×A* at IGCSE. Awards: 2× International Scholars with Honors, 2× Pearson Edexcel Excellence Awards, TIMO 2024 Bronze, HKIMO World Star medals.</p>
-        </section>
-
         <section class="section">
           <h2>Experience</h2>
           <p><strong>Sprint UTRA Research Fellow</strong> — May 2025–Present, Brown University.</p>
@@ -64,13 +69,23 @@
         </div>
         <div class="section small">
           <h3>Links</h3>
-          <p><a href="https://github.com/sanithuheen">GitHub</a><br><a href="https://www.linkedin.com/in/sanithu-heengama/">LinkedIn</a></p>
+          <p class="social-icons">
+            <a href="https://github.com/sanithuheen" aria-label="GitHub"><img src="assets/github.svg" alt="GitHub logo"></a>
+            <a href="https://www.linkedin.com/in/sanithu-heengama/" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn logo"></a>
+          </p>
         </div>
         <div class="section small cv-download">
           <a class="btn" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download PDF CV</a>
         </div>
       </aside>
     </div>
+
+    <!-- Education moved to bottom -->
+    <section class="section">
+      <h2>Education</h2>
+      <p><strong>Brown University</strong> — Sc.B. Computer Engineering (ABET) & Applied Mathematics, Aug 2023–May 2027 (GPA: 3.9/4.0). Relevant: Quantum Mechanics, ML, Computational Mathematics, Deep Learning, Computer Vision.</p>
+      <p><strong>Colombo International School</strong> — Graduated Aug 2023 (A*/A-levels: 4×A*, IGCSE 10×A*). Awards: 2× International Scholars with Honors, 2× Pearson Edexcel Excellence Awards, TIMO 2024 (Bronze), HKIMO 2023/24 (World Star/Medals).</p>
+    </section>
 
   </div>
 </body>
