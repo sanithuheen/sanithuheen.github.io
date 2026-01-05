@@ -7,93 +7,95 @@
   <!-- Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Styling for social icons */
-    .social-icon {
-      font-size: 1.2rem;
-      margin-right: 12px;
-      vertical-align: middle;
-      color: inherit;
-      text-decoration: none;
+    /* Global Styles */
+    :root {
+      --primary-blue: #0044cc;
+      --text-dark: #1a1a1a;
+      --text-gray: #444;
+      --border-light: #eeeeee;
     }
-    .social-icon:hover { color: #0077b5; }
-    .github-icon:hover { color: #333; }
 
-    /* Core Layout */
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.6;
       background-color: #ffffff;
-      color: #1a1a1a;
+      color: var(--text-dark);
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    /* Header with Image Left, Name Right */
+    /* Header Layout: Avatar Left, Name/Info Right */
     .header-inner {
       display: flex;
       align-items: center;
-      gap: 60px; /* Generous space between pic and text */
+      justify-content: flex-start;
+      gap: 60px;
       padding: 80px 0;
     }
 
-    /* Extra Large Avatar with Liquid Wave Animation */
+    /* Extra-Extra-Large Avatar with Liquid Blue Wave Animation */
     .avatar-wrap {
-      width: 380px; /* Expanded size as requested */
-      height: 380px; 
+      width: 420px; /* Expanded frame size to view more image */
+      height: 420px; 
       flex-shrink: 0;
       position: relative;
       overflow: hidden;
-      border: 4px solid #0044cc; /* Matching Blue Shard Header */
-      /* Continuous wave border animation */
-      animation: wave-morph 10s infinite alternate ease-in-out;
+      border: 6px solid var(--primary-blue); /* Distinct blue border shade */
+      /* Animation that morphs and eventually reveals the full asset */
+      animation: blue-wave-reveal 10s infinite alternate ease-in-out;
     }
 
     .avatar {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* Ensures image fills the 420px frame */
       display: block;
     }
 
-    @keyframes wave-morph {
+    @keyframes blue-wave-reveal {
       0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-      100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+      50% { border-radius: 40% 60% 60% 40% / 60% 50% 50% 40%; }
+      100% { border-radius: 50%; } /* Reverts to circle to show full image asset */
     }
 
-    /* Text on Right */
+    /* Header Text Column (Aligned Right of Avatar) */
     .header-info {
+      flex: 1;
       text-align: left;
     }
 
     h1.name {
       font-family: "Georgia", serif;
-      font-size: 3rem;
-      margin: 0 0 15px 0;
+      font-size: 3.2rem;
+      margin: 0 0 10px 0;
       font-weight: 700;
     }
 
     .tagline {
-      font-size: 1.25rem;
-      color: #444;
+      font-size: 1.35rem;
+      color: var(--text-gray);
       margin-bottom: 25px;
-      max-width: 600px;
+      max-width: 650px;
     }
 
-    .meta {
-      font-size: 1.1rem;
-      color: #666;
+    .social-icon {
+      font-size: 1.3rem;
+      margin-right: 15px;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.2s;
     }
+    .social-icon:hover { color: var(--primary-blue); }
 
-    /* Navigation */
+    /* Navigation Bar */
     .nav {
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
       padding: 20px 0;
       margin-bottom: 50px;
     }
@@ -101,26 +103,25 @@
       margin-right: 35px;
       font-weight: 600;
       text-decoration: none;
-      color: #1a1a1a;
-      transition: color 0.2s;
+      color: var(--text-dark);
     }
-    .nav a:hover { color: #0044cc; }
+    .nav a:hover { color: var(--primary-blue); }
 
-    /* Sections */
-    .card { margin-bottom: 50px; }
+    /* Main Content Sections */
+    .card { margin-bottom: 60px; }
     h2 { 
       font-family: "Georgia", serif; 
-      font-size: 1.8rem;
-      border-bottom: 1px solid #eee; 
+      font-size: 2rem; 
+      border-bottom: 1px solid var(--border-light); 
       padding-bottom: 12px; 
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
     ul { list-style-type: square; padding-left: 20px; }
-    li { margin-bottom: 15px; }
+    li { margin-bottom: 15px; font-size: 1.05rem; }
 
     .btn {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 12px 26px;
       background: #333;
       color: #fff !important;
       border-radius: 5px;
@@ -134,13 +135,12 @@
       border: 1px solid #333;
       margin-left: 15px;
     }
-    .btn:hover { opacity: 0.9; }
 
     .site-footer {
       padding: 60px 0;
       font-size: 0.95rem;
       color: #888;
-      border-top: 1px solid #eee;
+      border-top: 1px solid var(--border-light);
       margin-top: 40px;
     }
   </style>
@@ -148,54 +148,11 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Avatar on Left -->
+      <!-- Expanded Profile Picture (Left Side) -->
       <div class="avatar-wrap">
         <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
       </div>
       
-      <!-- Name and Tagline on Right -->
+      <!-- Name and Professional Info (Right Side) -->
       <div class="header-info">
-        <h1 class="name">Sanithu D. Heengama</h1>
-        <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown University — Research Assistant</p>
-        <p class="meta">
-          Providence, RI • 
-          <a href="https://github.com/sanithuheen" class="social-icon github-icon" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a> • 
-          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </p>
-      </div>
-    </div>
-    
-    <nav class="nav container">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
-    </section>
-
-    <section id="research" class="card">
-      <h2>Research & Projects</h2>
-      <ul>
-        <li><strong>Esophageal Manometry Redesign</strong> (2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device.</li>
-        <li><strong>LPS Qubit Collaboratory</strong> — Intensive quantum circuits and algorithms program focused on superconducting qubits.</li>
-        <li><strong>IEEE SSCS & Chipathon</strong> — Analog/digital circuit design on GF180 PDK using open-source EDA tools.</li>
-        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and NeRF-style 3D representations.</li>
-      </ul>
-    </section>
-
-    <section id="experience" class="card">
-      <h2>Work & Teaching</h2>
-      <ul>
-        <li><strong>Sprint UTRA Research Fellow</strong> — Brown University, May 2025–Present.</li>
-        <li><strong>Engineering TA / Grader</strong> — Brown University, Aug 2024
+        <h1 class="
