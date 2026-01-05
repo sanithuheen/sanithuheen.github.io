@@ -7,93 +7,172 @@
   <!-- Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Academic/Minimalist Style Base */
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #1a1a1a;
-      --link-color: #0044cc;
-      --nav-border: #eeeeee;
+    /* Styling for social icons */
+    .social-icon {
+      font-size: 1.2rem;
+      margin-right: 12px;
+      vertical-align: middle;
+      color: inherit;
+      text-decoration: none;
     }
+    .social-icon:hover { color: #0077b5; }
+    .github-icon:hover { color: #333; }
 
+    /* Core Layout */
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-      margin: 0 auto;
-      max-width: 900px;
-      padding: 60px 40px;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #1a1a1a;
     }
 
-    h1, h2 { font-family: "Georgia", serif; }
-    h1 { font-size: 2.5rem; margin-bottom: 0.2em; }
-    h2 { font-size: 1.6rem; margin-top: 2em; border-bottom: 1px solid var(--nav-border); padding-bottom: 8px; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
 
-    /* Expanded Avatar with Wave Animation */
+    /* Header with Image Left, Name Right */
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 60px; /* Generous space between pic and text */
+      padding: 80px 0;
+    }
+
+    /* Extra Large Avatar with Liquid Wave Animation */
     .avatar-wrap {
-      width: 320px; /* Expanded size to view more of the image */
-      height: 320px; /* Expanded size to view more of the image */
-      margin-bottom: 30px;
+      width: 380px; /* Expanded size as requested */
+      height: 380px; 
+      flex-shrink: 0;
       position: relative;
       overflow: hidden;
-      border: 3px solid var(--text-color);
-      /* Subtle wave border animation */
-      animation: morphing 10s infinite alternate ease-in-out;
+      border: 4px solid #0044cc; /* Matching Blue Shard Header */
+      /* Continuous wave border animation */
+      animation: wave-morph 10s infinite alternate ease-in-out;
     }
 
     .avatar {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures image fills the expanded area without distortion */
+      object-fit: cover;
       display: block;
     }
 
-    @keyframes morphing {
+    @keyframes wave-morph {
       0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-      50% { border-radius: 40% 60% 50% 50% / 50% 60% 40% 60%; }
+      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
       100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
     }
 
-    /* Navigation & Layout */
-    .nav {
-      margin: 30px 0;
-      padding: 15px 0;
-      border-top: 1px solid var(--nav-border);
-      border-bottom: 1px solid var(--nav-border);
+    /* Text on Right */
+    .header-info {
+      text-align: left;
     }
-    .nav a { margin-right: 25px; font-weight: 500; color: var(--text-color); text-decoration: none; }
-    .nav a:hover { text-decoration: underline; }
 
-    .card { background: transparent; border: none; margin-bottom: 30px; padding: 0; }
+    h1.name {
+      font-family: "Georgia", serif;
+      font-size: 3rem;
+      margin: 0 0 15px 0;
+      font-weight: 700;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: #444;
+      margin-bottom: 25px;
+      max-width: 600px;
+    }
+
+    .meta {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    /* Navigation */
+    .nav {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 20px 0;
+      margin-bottom: 50px;
+    }
+    .nav a {
+      margin-right: 35px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #1a1a1a;
+      transition: color 0.2s;
+    }
+    .nav a:hover { color: #0044cc; }
+
+    /* Sections */
+    .card { margin-bottom: 50px; }
+    h2 { 
+      font-family: "Georgia", serif; 
+      font-size: 1.8rem;
+      border-bottom: 1px solid #eee; 
+      padding-bottom: 12px; 
+      margin-bottom: 20px;
+    }
     ul { list-style-type: square; padding-left: 20px; }
-    li { margin-bottom: 10px; }
+    li { margin-bottom: 15px; }
 
-    .social-icon { font-size: 1.1rem; margin-right: 15px; color: #666; text-decoration: none; }
-    .btn { display: inline-block; padding: 10px 20px; background: #333; color: #fff !important; border-radius: 5px; text-decoration: none; }
-    .btn-outline { background: transparent; color: #333 !important; border: 1px solid #333; margin-left: 10px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #333;
+      color: #fff !important;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #333 !important;
+      border: 1px solid #333;
+      margin-left: 15px;
+    }
+    .btn:hover { opacity: 0.9; }
 
-    .site-footer { margin-top: 80px; font-size: 0.85rem; color: #888; border-top: 1px solid var(--nav-border); padding-top: 20px; }
+    .site-footer {
+      padding: 60px 0;
+      font-size: 0.95rem;
+      color: #888;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
+      <!-- Avatar on Left -->
       <div class="avatar-wrap">
         <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
       </div>
-      <h1 class="name">Sanithu D. Heengama</h1>
-      <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown University</p>
-      <p class="meta">
-        Providence, RI • 
-        <a href="https://github.com/sanithuheen" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      </p>
+      
+      <!-- Name and Tagline on Right -->
+      <div class="header-info">
+        <h1 class="name">Sanithu D. Heengama</h1>
+        <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown University — Research Assistant</p>
+        <p class="meta">
+          Providence, RI • 
+          <a href="https://github.com/sanithuheen" class="social-icon github-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a> • 
+          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </p>
+      </div>
     </div>
     
-    <nav class="nav">
+    <nav class="nav container">
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -102,51 +181,21 @@
   <main class="container">
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab, as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
     </section>
 
     <section id="research" class="card">
       <h2>Research & Projects</h2>
       <ul>
         <li><strong>Esophageal Manometry Redesign</strong> (2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device.</li>
-        <li><strong>LPS Qubit Collaboratory</strong> — Intensive quantum circuits and algorithms program.</li>
+        <li><strong>LPS Qubit Collaboratory</strong> — Intensive quantum circuits and algorithms program focused on superconducting qubits.</li>
         <li><strong>IEEE SSCS & Chipathon</strong> — Analog/digital circuit design on GF180 PDK using open-source EDA tools.</li>
-        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and NeRF-style representations.</li>
+        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and NeRF-style 3D representations.</li>
       </ul>
     </section>
-    
+
     <section id="experience" class="card">
       <h2>Work & Teaching</h2>
       <ul>
         <li><strong>Sprint UTRA Research Fellow</strong> — Brown University, May 2025–Present.</li>
-        <li><strong>Engineering TA / Grader</strong> — Brown University, 2024–2025. Delivered weekly recitations on MATLAB and Dynamics.</li>
-      </ul>
-    </section>
-
-    <section id="publications" class="card">
-      <h2>Publications</h2>
-      <ul>
-        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators, 2023.</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>Collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
-      <p style="margin-top: 25px;">
-        <a class="btn" href="https://github.com/sanithuheen">View GitHub</a>
-        <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download CV (PDF)</a>
-      </p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Reveal movement and IntersectionObserver removed to maintain static academic style
-  </script>
-</body>
-</html>
+        <li><strong>Engineering TA / Grader</strong> — Brown University, Aug 2024
