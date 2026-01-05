@@ -8,16 +8,16 @@
   <!-- Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Profile Picture Customization with Wave Animation */
+    /* Profile Picture Customization with Deep Zoom */
     .avatar-wrap {
       width: 250px;
       height: 250px;
       margin-bottom: 25px;
       position: relative;
-      overflow: hidden;
-      /* Wave border with silver and black dual-color styling */
-      background: linear-gradient(45deg, #000000, #c0c0c0); /* Black and Silver */
-      padding: 6px; /* Frame thickness */
+      overflow: hidden; /* Clips the scaled image to the morphing frame */
+      /* Dual Border Styling: Black and Silver */
+      background: linear-gradient(135deg, #000000 0%, #c0c0c0 100%); 
+      padding: 6px; 
       animation: wave-morph 8s infinite alternate ease-in-out;
       display: flex;
       justify-content: center;
@@ -27,11 +27,12 @@
     .avatar {
       width: 100%;
       height: 100%;
-      /* "Zoom In" effect: object-fit cover fills the entire frame without gaps */
-      object-fit: cover; 
-      object-position: center top; /* Focuses zoom on the upper portion/face */
+      /* Deep Zoom: scales image beyond 100% to fill and crop more aggressively */
+      transform: scale(1.3); 
+      object-fit: cover;
+      object-position: center 20%; /* Fine-tune focus on face area */
       background-color: #fff;
-      border-radius: inherit; /* Syncs image shape with morphing container */
+      border-radius: inherit; 
       display: block;
     }
 
@@ -65,8 +66,8 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Animated Avatar with Wave Reveal -->
-      <div class="avatar-wrap" data-reveal>
+      <!-- Deep Zoomed Avatar with Wave Animation -->
+      <div class="avatar-wrap">
         <img class="avatar" src="assets/Profile_web.png" alt="Sanithu Heengama"/>
       </div>
       <div>
@@ -95,20 +96,20 @@
   <main class="container">
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics, and a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
     </section>
 
-    <section id="research" class="card" data-reveal>
+    <section id="research" class="card">
       <h2>Research & Projects</h2>
       <ul>
-        <li><strong>Esophageal Manometry Redesign</strong> — Co-leading design and prototyping of a patient-friendly HRM device involving embedded electronics and clinician-centric software.</li>
+        <li><strong>Esophageal Manometry Redesign</strong> — Co-leading design and prototyping of a patient-friendly HRM device.</li>
         <li><strong>LPS Qubit Collaboratory</strong> — Completed an intensive program covering quantum circuits, algorithms, and qubit technologies.</li>
         <li><strong>IEEE SSCS & Chipathon</strong> — Designing analog/digital circuits on GF180 PDK using open-source EDA tools.</li>
         <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and AI-driven 3D scene reconstruction.</li>
       </ul>
     </section>
     
-    <section id="experience" class="card" data-reveal>
+    <section id="experience" class="card">
       <h2>Work & Teaching</h2>
       <ul>
         <li><strong>Sprint UTRA Research Fellow</strong> — May 2025–Present, Brown University.</li>
@@ -117,20 +118,20 @@
       </ul>
     </section>
 
-    <section id="publications" class="card" data-reveal>
+    <section id="publications" class="card">
       <h2>Publications</h2>
       <ul>
         <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (JEI), 2023.</li>
       </ul>
     </section>
 
-    <section id="education" class="card" data-reveal>
+    <section id="education" class="card">
       <h2>Education</h2>
       <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics, 2023–2027 (GPA: 3.9/4.0).</p>
       <p><strong>Colombo International School</strong> — Graduated Aug 2023 with 4×A* at A-Level.</p>
     </section>
     
-    <section id="contact" class="card" data-reveal>
+    <section id="contact" class="card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
       <div style="margin: 20px 0;">
