@@ -8,16 +8,16 @@
   <!-- Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Morphing Wave Animation & Border Styling */
+    /* Profile Picture Customization with Wave Animation */
     .avatar-wrap {
       width: 250px;
       height: 250px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       position: relative;
       overflow: hidden;
-      /* Wave border with silver and black dual-color animation */
-      background: linear-gradient(45deg, #333, #c0c0c0); /* Black to Silver Gradient */
-      padding: 5px; /* Creates the border effect */
+      /* Wave border with silver and black dual-color styling */
+      background: linear-gradient(45deg, #000000, #c0c0c0); /* Black and Silver */
+      padding: 6px; /* Frame thickness */
       animation: wave-morph 8s infinite alternate ease-in-out;
       display: flex;
       justify-content: center;
@@ -27,10 +27,11 @@
     .avatar {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      /* "Zoom In" effect: object-fit cover fills the entire frame without gaps */
+      object-fit: cover; 
+      object-position: center top; /* Focuses zoom on the upper portion/face */
       background-color: #fff;
-      /* Ensures the image also morphs with the container */
-      border-radius: inherit; 
+      border-radius: inherit; /* Syncs image shape with morphing container */
       display: block;
     }
 
@@ -55,29 +56,18 @@
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    .social-icon:hover {
-      color: #0077b5;
-    }
-    .github-icon:hover {
-      color: #333;
-    }
+    .social-icon:hover { color: #0077b5; }
+    .github-icon:hover { color: #333; }
     
-    .tagline {
-      margin-top: 10px;
-      font-weight: 500;
-    }
-
-    .meta {
-      margin-top: 10px;
-    }
+    .tagline { margin-top: 10px; font-weight: 500; }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Animated Avatar with Wave Effect -->
-      <div class="avatar-wrap">
-        <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
+      <!-- Animated Avatar with Wave Reveal -->
+      <div class="avatar-wrap" data-reveal>
+        <img class="avatar" src="assets/Profile_web.png" alt="Sanithu Heengama"/>
       </div>
       <div>
         <h1 class="name">Sanithu D. Heengama</h1>
@@ -105,20 +95,20 @@
   <main class="container">
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics, and a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
     </section>
 
-    <section id="research" class="card">
+    <section id="research" class="card" data-reveal>
       <h2>Research & Projects</h2>
       <ul>
-        <li><strong>Esophageal Manometry Redesign</strong> (Sept 2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device involving sensing, embedded electronics, and clinician-centric software.</li>
-        <li><strong>LPS Qubit Collaboratory</strong> (July–Aug 2025) — Completed an intensive program covering quantum circuits, algorithms, and qubit technologies.</li>
-        <li><strong>IEEE SSCS & Chipathon</strong> (2025) — Designing analog/digital circuits on GF180 PDK using open-source EDA tools with LLM-guided workflows.</li>
+        <li><strong>Esophageal Manometry Redesign</strong> — Co-leading design and prototyping of a patient-friendly HRM device involving embedded electronics and clinician-centric software.</li>
+        <li><strong>LPS Qubit Collaboratory</strong> — Completed an intensive program covering quantum circuits, algorithms, and qubit technologies.</li>
+        <li><strong>IEEE SSCS & Chipathon</strong> — Designing analog/digital circuits on GF180 PDK using open-source EDA tools.</li>
         <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and AI-driven 3D scene reconstruction.</li>
       </ul>
     </section>
     
-    <section id="experience" class="card">
+    <section id="experience" class="card" data-reveal>
       <h2>Work & Teaching</h2>
       <ul>
         <li><strong>Sprint UTRA Research Fellow</strong> — May 2025–Present, Brown University.</li>
@@ -127,7 +117,42 @@
       </ul>
     </section>
 
-    <section id="publications" class="card">
+    <section id="publications" class="card" data-reveal>
       <h2>Publications</h2>
       <ul>
-        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (JEI), 
+        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (JEI), 2023.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="card" data-reveal>
+      <h2>Education</h2>
+      <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics, 2023–2027 (GPA: 3.9/4.0).</p>
+      <p><strong>Colombo International School</strong> — Graduated Aug 2023 with 4×A* at A-Level.</p>
+    </section>
+    
+    <section id="contact" class="card" data-reveal>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
+      <div style="margin: 20px 0;">
+        <a class="social-icon github-icon" href="https://github.com/sanithuheen" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
+        <a class="social-icon" href="https://www.linkedin.com/in/sanithu-heengama/" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>
+        <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download CV (PDF)</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target)}});
+    },{threshold:0.1});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
