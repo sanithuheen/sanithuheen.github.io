@@ -1,88 +1,217 @@
-<style>
-  :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --link-color: #0044cc;
-    --accent-gray: #f4f4f4;
-  }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sanithu D. Heengama — Portfolio</title>
+  <!-- Added Font Awesome for Logos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Leo Kozachkov Style Implementation */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --link-color: #0044cc;
+      --nav-border: #eeeeee;
+    }
 
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 40px 20px;
-  }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0 auto;
+      max-width: 900px; /* Wider container for academic feel */
+      padding: 60px 40px;
+    }
 
-  h1, h2, h3 {
-    font-family: "Georgia", serif;
-    font-weight: 700;
-    margin-top: 2em;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-  }
+    /* Typography */
+    h1 {
+      font-family: "Georgia", serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.2em;
+    }
 
-  a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
+    h2 {
+      font-family: "Georgia", serif;
+      font-size: 1.6rem;
+      margin-top: 2em;
+      border-bottom: 1px solid var(--nav-border);
+      padding-bottom: 8px;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    p.tagline {
+      font-size: 1.15rem;
+      color: #444;
+      margin-top: 0;
+    }
 
-  .site-header {
-    text-align: left;
-    margin-bottom: 50px;
-  }
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
 
-  .avatar {
-    width: 150px;
-    border-radius: 50%; /* Kozachkov uses circles for profile shots */
-    filter: grayscale(20%); /* Optional: adds to the academic feel */
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .nav {
-    margin: 20px 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-  }
+    /* Profile Picture Scaling */
+    .avatar-wrap {
+      margin-bottom: 20px;
+    }
 
-  .nav a {
-    margin-right: 20px;
-    font-weight: 600;
-    color: #333;
-  }
+    .avatar {
+      width: 220px; /* Increased size to match sample site */
+      height: auto;
+      border-radius: 4px; /* Professional slight rounding */
+      display: block;
+    }
 
-  /* Matching the Kozachkov bullet style */
-  ul {
-    list-style-type: square;
-    padding-left: 20px;
-  }
+    /* Layout & Navigation */
+    .nav {
+      margin: 30px 0;
+      padding: 15px 0;
+      border-top: 1px solid var(--nav-border);
+      border-bottom: 1px solid var(--nav-border);
+    }
 
-  .card {
-    background: none;
-    box-shadow: none;
-    border: none;
-    margin-bottom: 0;
-    padding: 0;
-  }
+    .nav a {
+      margin-right: 25px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
 
-  .social-icon {
-    font-size: 1rem;
-    color: #555;
-    margin-right: 15px;
-  }
+    .container {
+      width: 100%;
+    }
 
-  .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background: #333;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-  }
-</style>
+    /* Removing Card Styles to match flat minimalist look */
+    .card {
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .social-icon {
+      font-size: 1.1rem;
+      margin-right: 15px;
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff !important;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 0.9rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #333 !important;
+      border: 1px solid #333;
+    }
+
+    .site-footer {
+      margin-top: 80px;
+      font-size: 0.85rem;
+      color: #888;
+      border-top: 1px solid var(--nav-border);
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="avatar-wrap">
+        <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
+      </div>
+      <h1 class="name">Sanithu D. Heengama</h1>
+      <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown University</p>
+      <p class="meta">
+        Providence, RI • 
+        <a href="https://github.com/sanithuheen" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </p>
+    </div>
+    
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab, as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
+    </section>
+
+    <section id="research" class="card">
+      <h2>Research & Projects</h2>
+      <ul>
+        <li><strong>Esophageal Manometry Redesign</strong> (2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device.</li>
+        <li><strong>LPS Qubit Collaboratory</strong> — Intensive quantum circuits and algorithms program.</li>
+        <li><strong>IEEE SSCS & Chipathon</strong> — Analog/digital circuit design on GF180 PDK using open-source EDA tools.</li>
+        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and NeRF-style representations.</li>
+      </ul>
+    </section>
+    
+    <section id="experience" class="card">
+      <h2>Work & Teaching</h2>
+      <ul>
+        <li><strong>Sprint UTRA Research Fellow</strong> — Brown University, May 2025–Present.</li>
+        <li><strong>Engineering TA / Grader</strong> — Brown University, 2024–2025. Weekly recitations on MATLAB and Dynamics.</li>
+        <li><strong>Engineering Research Intern</strong> — Dexwet Holding (Vienna). IoT air-quality monitor development.</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Publications</h2>
+      <ul>
+        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators, 2023.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics, 2023–2027 (GPA: 3.9/4.0).</p>
+      <p><strong>Colombo International School</strong> — Graduated 2023 (4×A* at A-level).</p>
+    </section>
+    
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
+      <p style="margin-top: 25px;">
+        <a class="btn" href="https://github.com/sanithuheen">View GitHub</a>
+        <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download CV (PDF)</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
