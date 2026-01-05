@@ -5,41 +5,22 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sanithu D. Heengama — Portfolio</title>
   <link rel="stylesheet" href="assets/style.css">
-  <!-- Font Awesome for Logos -->
+  <!-- Added Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Profile Picture Customization */
-    .avatar {
-      width: 250px;           /* Increased weight/size */
-      height: 100px;
-      object-fit: contain;    /* Zooms out to show entire face/image */
-      border-radius: 0%;      /* Maintains circular shape */
-      background-color: #fff;  /* Clean white background behind image */
-      border: 2px solid #eee;  /* Optional subtle border */
-    }
-    .avatar-wrap {
-      margin-bottom: 20px;
-    }
-    /* Social Icon Styling */
+    /* Styling for social icons to make them look clean */
     .social-icon {
-      font-size: 1.4rem;
-      margin-right: 12px;
+      font-size: 1.2rem;
+      margin-right: 8px;
       vertical-align: middle;
       color: inherit;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
     .social-icon:hover {
-      color: #0077b5; /* LinkedIn Blue */
+      color: #0077b5; /* LinkedIn Blue on hover */
     }
     .github-icon:hover {
-      color: #333;    /* GitHub Black */
-    }
-    
-    /* Layout fix for tagline */
-    .tagline {
-      margin-top: 10px;
-      font-weight: 500;
+      color: #333; /* GitHub Black on hover */
     }
   </style>
 </head>
@@ -66,7 +47,7 @@
     <nav class="nav container">
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -75,57 +56,59 @@
   <main class="container">
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics, and a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS) [file:2][file:123].</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics, and a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
     </section>
 
     <section id="research" class="card" data-reveal>
       <h2>Research & Projects</h2>
       <ul>
-        <li><strong>Esophageal Manometry Redesign</strong> (Sept 2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device involving sensing, embedded electronics, and clinician-centric software [file:2].</li>
-        <li><strong>LPS Qubit Collaboratory</strong> (July–Aug 2025) — Completed an intensive program covering quantum circuits, algorithms, error correction, and qubit technologies [file:2].</li>
-        <li><strong>IEEE SSCS & Chipathon</strong> (2025) — Designing analog/digital circuits on GF180 PDK using open-source EDA tools (gLayout, OpenROAD) with LLM-guided workflows [file:2].</li>
-        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and AI-driven 3D scene reconstruction with Prof. Srinath Sridhar [file:2][file:123].</li>
+        <li><strong>Esophageal Manometry Redesign</strong> (Sept 2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device.</li>
+        <li><strong>LPS Qubit Collaboratory</strong> (July–Aug 2025) — Intensive quantum circuits and algorithms program.</li>
+        <li><strong>IEEE SSCS & Chipathon</strong> (2025) — Analog/digital circuit design on GF180 PDK using open-source EDA tools and LLM-guided workflows.</li>
+        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and NeRF-style representations.</li>
+        <li><strong>IoT Publication:</strong> <a href="https://doi.org/10.59720/23-024">JEI paper on indoor air quality monitoring</a>.</li>
       </ul>
     </section>
     
     <section id="experience" class="card" data-reveal>
       <h2>Work & Teaching</h2>
       <ul>
-        <li><strong>Sprint UTRA Research Fellow</strong> — May 2025–Present, Brown University [file:2].</li>
-        <li><strong>Engineering TA / Grader</strong> — Aug 2024–May 2025, Brown University. Delivered weekly lectures on Newtonian dynamics and MATLAB to over 30 students [file:2].</li>
-        <li><strong>Engineering Research Intern</strong> — June–Aug 2024, Dexwet Holding (Vienna): Developed IoT air quality monitor prototypes and optimized performance via statistical analysis [file:2].</li>
+        <li><strong>Sprint UTRA Research Fellow</strong> — May 2025–Present, Brown University.</li>
+        <li><strong>Engineering TA / Grader</strong> — Aug 2024–May 2025, Brown University. Delivered weekly recitations on MATLAB and Dynamics.</li>
+        <li><strong>Engineering Research Intern</strong> — June–Aug 2024, Dexwet Holding (Vienna): IoT air-quality monitor development.</li>
       </ul>
     </section>
 
     <section id="publications" class="card" data-reveal>
       <h2>Publications</h2>
       <ul>
-        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (JEI), Accepted Sep 05, 2023. DOI: <a href="https://doi.org/10.59720/23-024">10.59720/23-024</a> [file:2].</li>
-        <li>For a full list of preprints and technical reports, please see my <a href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf">downloadable CV</a>.</li>
+        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (Accepted Sep 05, 2023).</li>
+        <li>Other projects — see <a href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf">downloadable CV</a>.</li>
       </ul>
     </section>
 
     <section id="education" class="card" data-reveal>
       <h2>Education</h2>
-      <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics, 2023–2027 (GPA: 3.9/4.0). Relevant Subjects: Quantum Mechanics, ML, Computational Mathematics, Deep Learning, Computer Vision [file:2].</p>
-      <p><strong>Colombo International School</strong> — Graduated Aug 2023 with 4×A* at A-Level. Awards: Pearson Edexcel Excellence Awards, TIMO 2024 (Bronze), HKIMO 2023/24 (World Star) [file:2].</p>
+      <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics, 2023–2027 (GPA: 3.9/4.0).</p>
+      <p><strong>Colombo International School</strong> — Graduated 2023 (4×A* at A-level). TIMO 2024 (Bronze), HKIMO 2023/24 (World Star).</p>
     </section>
     
     <section id="contact" class="card" data-reveal>
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
-      <div style="margin: 20px 0;">
-        <a class="social-icon github-icon" href="https://github.com/sanithuheen" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
-        <a class="social-icon" href="https://www.linkedin.com/in/sanithu-heengama/" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+      <p>Collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
+      <div style="margin-top: 15px;">
+        <a class="social-icon github-icon" href="https://github.com/sanithuheen"><i class="fab fa-github fa-2x"></i></a>
+        <a class="social-icon" href="https://www.linkedin.com/in/sanithu-heengama/"><i class="fab fa-linkedin fa-2x"></i></a>
       </div>
-      <p>
+      <p style="margin-top: 20px;">
+        <a class="btn" href="https://github.com/sanithuheen">View GitHub</a>
         <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download CV (PDF)</a>
       </p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Sanithu D. Heengama — Built for Academic Portfolio</div>
+    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
   </footer>
 
   <script>
