@@ -29,7 +29,14 @@
     <div class="container header-inner">
       <div class="avatar-wrap" data-reveal>
         <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
-      </div>
+            .avatar {
+      width: 250px;       /* Increased size from 150px to 250px */
+      height: 250px;
+      object-fit: contain; /* Zooms out to show the entire face/image */
+      border-radius: 50%;  /* Keeps it a circle */
+      background-color: #f0f0f0; /* Optional: adds a light gray background if the image has gaps */
+    }
+     </div>
       <div>
         <h1 class="name">Sanithu D. Heengama</h1>
         <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown University— Research Assistant</p>
