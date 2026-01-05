@@ -7,12 +7,12 @@
   <!-- Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Global Styles */
+    /* Clean Academic Variables */
     :root {
-      --primary-blue: #0044cc;
+      --header-border: #add8e6; /* Light Blue */
       --text-dark: #1a1a1a;
-      --text-gray: #444;
-      --border-light: #eeeeee;
+      --text-gray: #555;
+      --accent-blue: #0044cc;
     }
 
     body {
@@ -24,46 +24,50 @@
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1150px;
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    /* Header Layout: Avatar Left, Name/Info Right */
+    /* Header Layout: Avatar Left, Text Right */
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 60px;
-      padding: 80px 0;
+      gap: 50px;
+      padding: 70px 0;
+      border-bottom: 2px solid var(--header-border); /* Light Blue Header Border */
     }
 
-    /* Extra-Extra-Large Avatar with Liquid Blue Wave Animation */
+    /* Wave Frame with "Zoomed Out" Image Reveal */
     .avatar-wrap {
-      width: 420px; /* Expanded frame size to view more image */
-      height: 420px; 
+      width: 440px; /* Frame size slightly increased */
+      height: 440px; 
       flex-shrink: 0;
       position: relative;
       overflow: hidden;
-      border: 6px solid var(--primary-blue); /* Distinct blue border shade */
-      /* Animation that morphs and eventually reveals the full asset */
-      animation: blue-wave-reveal 10s infinite alternate ease-in-out;
+      background-color: #f9f9f9; /* Subtle background if image edges show */
+      border: 3px solid var(--accent-blue);
+      /* Wave border morphing without the shaded blue background overlay */
+      animation: wave-morph 12s infinite alternate ease-in-out;
     }
 
     .avatar {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures image fills the 420px frame */
+      /* "Zoom Out": object-fit: contain ensures the entire asset is visible */
+      object-fit: contain; 
       display: block;
+      padding: 10px; /* Extra spacing to show more of the image edges */
     }
 
-    @keyframes blue-wave-reveal {
+    @keyframes wave-morph {
       0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
       50% { border-radius: 40% 60% 60% 40% / 60% 50% 50% 40%; }
-      100% { border-radius: 50%; } /* Reverts to circle to show full image asset */
+      100% { border-radius: 50%; } /* Simplifies to show full corners periodically */
     }
 
-    /* Header Text Column (Aligned Right of Avatar) */
+    /* Reduced Name Font & Right-Side Info */
     .header-info {
       flex: 1;
       text-align: left;
@@ -71,88 +75,95 @@
 
     h1.name {
       font-family: "Georgia", serif;
-      font-size: 3.2rem;
-      margin: 0 0 10px 0;
+      font-size: 2.6rem; /* Reduced from 3.2rem */
+      margin: 0 0 8px 0;
       font-weight: 700;
     }
 
     .tagline {
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       color: var(--text-gray);
-      margin-bottom: 25px;
-      max-width: 650px;
+      margin-bottom: 20px;
+      max-width: 600px;
     }
 
     .social-icon {
-      font-size: 1.3rem;
-      margin-right: 15px;
+      font-size: 1.2rem;
+      margin-right: 12px;
       color: var(--text-dark);
       text-decoration: none;
-      transition: color 0.2s;
     }
-    .social-icon:hover { color: var(--primary-blue); }
+    .social-icon:hover { color: var(--accent-blue); }
 
     /* Navigation Bar */
     .nav {
-      border-top: 1px solid var(--border-light);
-      border-bottom: 1px solid var(--border-light);
       padding: 20px 0;
-      margin-bottom: 50px;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 40px;
     }
     .nav a {
-      margin-right: 35px;
+      margin-right: 30px;
       font-weight: 600;
       text-decoration: none;
       color: var(--text-dark);
     }
-    .nav a:hover { color: var(--primary-blue); }
+    .nav a:hover { color: var(--accent-blue); }
 
-    /* Main Content Sections */
-    .card { margin-bottom: 60px; }
+    /* Content Sections */
+    .card { margin-bottom: 50px; }
     h2 { 
       font-family: "Georgia", serif; 
-      font-size: 2rem; 
-      border-bottom: 1px solid var(--border-light); 
-      padding-bottom: 12px; 
-      margin-bottom: 25px;
+      font-size: 1.8rem; 
+      border-bottom: 1px solid #eee; 
+      padding-bottom: 10px; 
+      margin-bottom: 20px;
     }
     ul { list-style-type: square; padding-left: 20px; }
-    li { margin-bottom: 15px; font-size: 1.05rem; }
+    li { margin-bottom: 12px; }
 
     .btn {
       display: inline-block;
-      padding: 12px 26px;
+      padding: 11px 22px;
       background: #333;
       color: #fff !important;
-      border-radius: 5px;
+      border-radius: 4px;
       text-decoration: none;
-      margin-top: 20px;
-      font-weight: 500;
+      margin-top: 15px;
     }
     .btn-outline {
       background: transparent;
       color: #333 !important;
       border: 1px solid #333;
-      margin-left: 15px;
+      margin-left: 12px;
     }
 
     .site-footer {
-      padding: 60px 0;
-      font-size: 0.95rem;
+      padding: 50px 0;
+      font-size: 0.9rem;
       color: #888;
-      border-top: 1px solid var(--border-light);
-      margin-top: 40px;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <!-- Expanded Profile Picture (Left Side) -->
+      <!-- Expanded and Zoomed-Out Avatar -->
       <div class="avatar-wrap">
         <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
       </div>
       
-      <!-- Name and Professional Info (Right Side) -->
+      <!-- Name and Info on Right -->
       <div class="header-info">
-        <h1 class="
+        <h1 class="name">Sanithu D. Heengama</h1>
+        <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown University — Research Assistant</p>
+        <p class="meta">
+          Providence, RI • 
+          <a href="https://github.com/sanithuheen" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </div>
+    </div>
+    
+    <nav class="nav container">
+      <a href="#about">About</
