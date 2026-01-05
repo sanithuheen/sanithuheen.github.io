@@ -7,12 +7,12 @@
   <!-- Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    /* Clean Academic Variables */
+    /* Global Variables */
     :root {
-      --header-border: #add8e6; /* Light Blue */
-      --text-dark: #1a1a1a;
-      --text-gray: #555;
+      --header-bg: #eef6fc; /* Light blue entire top section */
       --accent-blue: #0044cc;
+      --text-dark: #1a1a1a;
+      --text-gray: #444;
     }
 
     body {
@@ -23,51 +23,53 @@
       color: var(--text-dark);
     }
 
+    /* Top Section with Light Blue Contrast */
+    .top-section {
+      background-color: var(--header-bg);
+      padding-bottom: 20px;
+    }
+
     .container {
-      max-width: 1150px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    /* Header Layout: Avatar Left, Text Right */
+    /* Header Layout */
     .header-inner {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 50px;
-      padding: 70px 0;
-      border-bottom: 2px solid var(--header-border); /* Light Blue Header Border */
+      padding: 80px 0;
     }
 
-    /* Wave Frame with "Zoomed Out" Image Reveal */
+    /* Smaller Avatar with NO white space */
     .avatar-wrap {
-      width: 440px; /* Frame size slightly increased */
-      height: 440px; 
+      width: 340px; /* Reduced from 420px */
+      height: 340px; 
       flex-shrink: 0;
       position: relative;
       overflow: hidden;
-      background-color: #f9f9f9; /* Subtle background if image edges show */
-      border: 3px solid var(--accent-blue);
-      /* Wave border morphing without the shaded blue background overlay */
-      animation: wave-morph 12s infinite alternate ease-in-out;
+      border: 4px solid var(--accent-blue);
+      animation: wave-morph 10s infinite alternate ease-in-out;
+      background-color: #ffffff;
     }
 
     .avatar {
       width: 100%;
       height: 100%;
-      /* "Zoom Out": object-fit: contain ensures the entire asset is visible */
-      object-fit: contain; 
+      /* object-fit: cover ensures NO white space inside the border */
+      object-fit: cover; 
       display: block;
-      padding: 10px; /* Extra spacing to show more of the image edges */
     }
 
     @keyframes wave-morph {
       0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
       50% { border-radius: 40% 60% 60% 40% / 60% 50% 50% 40%; }
-      100% { border-radius: 50%; } /* Simplifies to show full corners periodically */
+      100% { border-radius: 50%; } 
     }
 
-    /* Reduced Name Font & Right-Side Info */
+    /* Text on Right */
     .header-info {
       flex: 1;
       text-align: left;
@@ -75,31 +77,22 @@
 
     h1.name {
       font-family: "Georgia", serif;
-      font-size: 2.6rem; /* Reduced from 3.2rem */
-      margin: 0 0 8px 0;
+      font-size: 2.8rem;
+      margin: 0 0 10px 0;
       font-weight: 700;
     }
 
     .tagline {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--text-gray);
-      margin-bottom: 20px;
-      max-width: 600px;
+      margin-bottom: 25px;
     }
 
-    .social-icon {
-      font-size: 1.2rem;
-      margin-right: 12px;
-      color: var(--text-dark);
-      text-decoration: none;
-    }
-    .social-icon:hover { color: var(--accent-blue); }
-
-    /* Navigation Bar */
+    /* Navigation Bar (Still in Light Blue Section) */
     .nav {
       padding: 20px 0;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 40px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
     .nav a {
       margin-right: 30px;
@@ -109,13 +102,17 @@
     }
     .nav a:hover { color: var(--accent-blue); }
 
-    /* Content Sections */
+    /* Main Content (White Background) */
+    .main-content {
+      padding: 60px 0;
+    }
+
     .card { margin-bottom: 50px; }
     h2 { 
       font-family: "Georgia", serif; 
-      font-size: 1.8rem; 
+      font-size: 1.9rem; 
       border-bottom: 1px solid #eee; 
-      padding-bottom: 10px; 
+      padding-bottom: 12px; 
       margin-bottom: 20px;
     }
     ul { list-style-type: square; padding-left: 20px; }
@@ -126,7 +123,7 @@
       padding: 11px 22px;
       background: #333;
       color: #fff !important;
-      border-radius: 4px;
+      border-radius: 5px;
       text-decoration: none;
       margin-top: 15px;
     }
@@ -146,45 +143,49 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <!-- Expanded and Zoomed-Out Avatar -->
-      <div class="avatar-wrap">
-        <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
+  <div class="top-section">
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Resized Avatar with No White Space -->
+        <div class="avatar-wrap">
+          <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
+        </div>
+        
+        <!-- Info on Right -->
+        <div class="header-info">
+          <h1 class="name">Sanithu D. Heengama</h1>
+          <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown — Research Assistant</p>
+          <p class="meta">
+            Providence, RI • 
+            <a href="https://github.com/sanithuheen" class="social-icon" style="text-decoration:none; color:inherit;"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" style="text-decoration:none; color:inherit;"><i class="fab fa-linkedin"></i></a>
+          </p>
+        </div>
       </div>
       
-      <!-- Name and Info on Right -->
-      <div class="header-info">
-        <h1 class="name">Sanithu D. Heengama</h1>
-        <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown University — Research Assistant</p>
-        <p class="meta">
-          Providence, RI • 
-          <a href="https://github.com/sanithuheen" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </p>
-      </div>
-    </div>
-    
-    <nav class="nav container">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+      <nav class="nav">
+        <div class="container">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+  </div>
 
-  <main class="container">
+  <main class="container main-content">
     <section id="about" class="card">
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. My research contributions involve 3D Vision, Quantum Computing, and Digital/Analog Circuits.</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. My work focuses on 3D Vision and Quantum Computing research.</p>
     </section>
 
     <section id="research" class="card">
       <h2>Research & Projects</h2>
       <ul>
-        <li><strong>Esophageal Manometry Redesign</strong> — Leading prototyping for patient-friendly healthcare devices.</li>
-        <li><strong>LPS Qubit Collaboratory</strong> — Quantum circuits and algorithms development.</li>
+        <li><strong>Esophageal Manometry Redesign</strong> — Co-leading design and prototyping of a patient-friendly HRM device.</li>
+        <li><strong>LPS Qubit Collaboratory</strong> — Intensive quantum circuits and algorithms program.</li>
         <li><strong>Radiance Fields</strong> — Research on Gaussian splatting and NeRF representations.</li>
       </ul>
     </section>
