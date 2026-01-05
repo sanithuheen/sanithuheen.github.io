@@ -166,4 +166,45 @@
     </div>
     
     <nav class="nav container">
-      <a href="#about">About</
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. My research contributions involve 3D Vision, Quantum Computing, and Digital/Analog Circuits.</p>
+    </section>
+
+    <section id="research" class="card">
+      <h2>Research & Projects</h2>
+      <ul>
+        <li><strong>Esophageal Manometry Redesign</strong> — Leading prototyping for patient-friendly healthcare devices.</li>
+        <li><strong>LPS Qubit Collaboratory</strong> — Quantum circuits and algorithms development.</li>
+        <li><strong>Radiance Fields</strong> — Research on Gaussian splatting and NeRF representations.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
+      <p>
+        <a class="btn" href="https://github.com/sanithuheen">View GitHub</a>
+        <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download CV (PDF)</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
