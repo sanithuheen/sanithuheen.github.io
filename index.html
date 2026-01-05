@@ -1,122 +1,88 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sanithu D. Heengama — Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <!-- Added Font Awesome for Logos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    /* Styling for social icons to make them look clean */
-    .social-icon {
-      font-size: 1.2rem;
-      margin-right: 20px;
-      vertical-align: middle;
-      color: inherit;
-      text-decoration: none;
-    }
-    .social-icon:hover {
-      color: #0077b5; /* LinkedIn Blue on hover */
-    }
-    .github-icon:hover {
-      color: #333; /* GitHub Black on hover */
-    }
-  </style>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="avatar-wrap" data-reveal>
-        <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
-      </div>
-      <div>
-        <h1 class="name">Sanithu D. Heengama</h1>
-        <p class="tagline">Sc. B Computer Engineering & Applied Mathematics student @ Brown — Research Assistant</p>
-        <p class="meta">
-          Providence, RI • 
-          <a href="https://github.com/sanithuheen" class="social-icon github-icon" title="GitHub">
-            <i class="fab fa-github"></i>
-          </a> • 
-          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </p>
-      </div>
-    </div>
-    <nav class="nav container">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --link-color: #0044cc;
+    --accent-gray: #f4f4f4;
+  }
 
-  <main class="container">
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics, and a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
-    </section>
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 40px 20px;
+  }
 
-    <section id="research" class="card" data-reveal>
-      <h2>Research & Projects</h2>
-      <ul>
-        <li><strong>Esophageal Manometry Redesign</strong> (Sept 2025–Present) — Co-leading design and prototyping of a patient-friendly HRM device.</li>
-        <li><strong>LPS Qubit Collaboratory</strong> (July–Aug 2025) — Intensive quantum circuits and algorithms program.</li>
-        <li><strong>IEEE SSCS & Chipathon</strong> (2025) — Analog/digital circuit design on GF180 PDK using open-source EDA tools and LLM-guided workflows.</li>
-        <li><strong>Radiance Fields & 3D Vision</strong> — Research on Gaussian splatting and NeRF-style representations.</li>
-        <li><strong>IoT Publication:</strong> <a href="https://doi.org/10.59720/23-024">JEI paper on indoor air quality monitoring</a>.</li>
-      </ul>
-    </section>
-    
-    <section id="experience" class="card" data-reveal>
-      <h2>Work & Teaching</h2>
-      <ul>
-        <li><strong>Sprint UTRA Research Fellow</strong> — May 2025–Present, Brown University.</li>
-        <li><strong>Engineering TA / Grader</strong> — Aug 2024–May 2025, Brown University. Delivered weekly recitations on MATLAB and Dynamics.</li>
-        <li><strong>Engineering Research Intern</strong> — June–Aug 2024, Dexwet Holding (Vienna): IoT air-quality monitor development.</li>
-      </ul>
-    </section>
+  h1, h2, h3 {
+    font-family: "Georgia", serif;
+    font-weight: 700;
+    margin-top: 2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
 
-    <section id="publications" class="card" data-reveal>
-      <h2>Publications</h2>
-      <ul>
-        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (Accepted Sep 05, 2023).</li>
-        <li>Other projects — see <a href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf">downloadable CV</a>.</li>
-      </ul>
-    </section>
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
 
-    <section id="education" class="card" data-reveal>
-      <h2>Education</h2>
-      <p><strong>Brown University</strong> — Sc.B. Computer Engineering & Applied Mathematics, 2023–2027 (GPA: 3.9/4.0).</p>
-      <p><strong>Colombo International School</strong> — Graduated 2023 (4×A* at A-level). TIMO 2024 (Bronze), HKIMO 2023/24 (World Star).</p>
-    </section>
-    
-    <section id="contact" class="card" data-reveal>
-      <h2>Contact</h2>
-      <p>Collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
-      <div style="margin-top: 15px;">
-        <a class="social-icon github-icon" href="https://github.com/sanithuheen"><i class="fab fa-github fa-2x"></i></a>
-        <a class="social-icon" href="https://www.linkedin.com/in/sanithu-heengama/"><i class="fab fa-linkedin fa-2x"></i></a>
-      </div>
-      <p style="margin-top: 20px;">
-        <a class="btn" href="https://github.com/sanithuheen">View GitHub</a>
-        <a class="btn btn-outline" href="assets/Sanithu_D_Heengama_CV_Nov_2025.pdf" download>Download CV (PDF)</a>
-      </p>
-    </section>
-  </main>
+  a:hover {
+    text-decoration: underline;
+  }
 
-  <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
-  </footer>
+  .site-header {
+    text-align: left;
+    margin-bottom: 50px;
+  }
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target)}});
-    },{threshold:0.1});
-    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
-  </script>
-</body>
-</html>
+  .avatar {
+    width: 150px;
+    border-radius: 50%; /* Kozachkov uses circles for profile shots */
+    filter: grayscale(20%); /* Optional: adds to the academic feel */
+  }
+
+  .nav {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  .nav a {
+    margin-right: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  /* Matching the Kozachkov bullet style */
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+
+  .card {
+    background: none;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .social-icon {
+    font-size: 1rem;
+    color: #555;
+    margin-right: 15px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+</style>
