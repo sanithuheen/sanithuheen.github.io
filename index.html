@@ -1,127 +1,141 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sanithu D. Heengama — Portfolio</title>
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    :root {
-      --font-headline: "minion-pro", "Minion Pro", Georgia, serif;
-      --font-body: "freight-sans-pro", "Freight Sans", "Gotham Narrow", Arial, sans-serif;
-      --font-secondary: "gotham-narrow", "Gotham Narrow", "Helvetica Neue", Arial, sans-serif;
-      --brown-red: #ed1c24; /* Subtle Brown University accent color */
-    }
-
-    body { font-family: var(--font-body); line-height: 1.6; color: #333; }
-    h1, h2, h3, .name { font-family: var(--font-headline); font-weight: 700; margin-bottom: 0.5rem; }
-    .tagline, .meta, .nav a { font-family: var(--font-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
-
-    /* Project List Styling (wanjia-fu style) */
-    .project-item { margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem; }
-    .project-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .project-title { font-size: 1.25rem; font-weight: bold; color: #000; }
-    .project-date { font-family: var(--font-secondary); font-size: 0.9rem; color: #666; white-space: nowrap; }
-    .project-subtitle { font-style: italic; color: #444; margin: 2px 0; }
-    .mentors { font-size: 0.95rem; color: #555; margin-bottom: 8px; }
-    .project-content { font-size: 1rem; margin-top: 10px; }
-    .project-content ul { margin-top: 8px; padding-left: 20px; }
-
-    /* Existing Styles */
-    .social-icon { font-size: 1.2rem; margin-right: 8px; vertical-align: middle; color: inherit; text-decoration: none; }
-    .social-icon:hover { color: #0044cc; }
-    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 600px) { 
-      .skills-grid { grid-template-columns: 1fr; } 
-      .project-header { flex-direction: column; }
-    }
-    
-    [data-reveal] { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
-    [data-reveal].visible { opacity: 1; transform: translateY(0); }
-  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="avatar-wrap" data-reveal>
-        <img class="avatar" src="assets/SH_Profile.png" alt="Sanithu Heengama"/>
+        <img class="avatar" src="assets/Profile_web.png" alt="Sanithu Heengama" />
       </div>
       <div>
         <h1 class="name">Sanithu D. Heengama</h1>
         <p class="tagline">Sc. B. Computer Engineering & Applied Mathematics student @ Brown — Research Assistant</p>
         <p class="meta">
-          Providence, RI • 
-          <a href="https://github.com/sanithuheen" class="social-icon github-icon" title="GitHub"><i class="fab fa-github"></i></a> • 
-          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          Providence, RI •
+          <a href="https://github.com/sanithuheen" class="social-icon github-icon" title="GitHub"><i
+              class="fab fa-github"></i></a> •
+          <a href="https://www.linkedin.com/in/sanithu-heengama/" class="social-icon" title="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
         </p>
       </div>
     </div>
-    <nav class="nav container">
+  </header>
+
+  <nav class="nav">
+    <div class="container">
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#awards">Projects</a
-      <a href="#awards">Awards</a>
+      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+      <a href="#education">Education</a>
+    </div>
+  </nav>
 
   <main class="container">
     <section id="about" class="card" data-reveal>
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering and Applied Mathematics. I am a
+        researcher in the Brown Visual Computing and Interactive 3D Vision and Learning Lab as well as the Laboratory
+        for Engineering Man/Machine Systems (LEMS).</p>
     </section>
 
+    <!-- RESEARCH SECTION -->
     <section id="research" class="card" data-reveal>
       <h2>Research</h2>
 
-      <!-- Project 1 -->
+      <!-- Research 1: 3D from Multi-view -->
       <div class="project-item">
         <div class="project-header">
-          <div class="project-title">Esophageal Manometry Redesign</div>
-          <div class="project-date">Sept 2025 – Present</div>
+          <div class="project-title">3D from Multi-view and Sensors</div>
+          <div class="project-date">08/2025 – Current</div>
         </div>
-        <div class="project-subtitle">Brown University, RISD University</div>
-        <div class="mentors"><strong>Mentors:</strong> Dr. Celinda Kofron (Academic), Dr. Wai-Kit Lo, M.D (Clinical)</div>
-        <div class="project-content">
-          Co‑leading a year‑long effort to convert High Resolution Esophageal Manometry (HRM) into a patient‑friendly, clinically robust device. Scope spans requirements capture, embedded electronics, UX/human‑factors testing, hospital integration, and IP planning for a functioning medical device prototype.
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-item">
-        <div class="project-header">
-          <div class="project-title">Radiance Fields for 3D Computer Vision and AI</div>
-          <div class="project-date">May 2025 – Present</div>
-        </div>
-        <div class="project-subtitle">Brown Visual Computing Lab</div>
-        <div class="mentors"><strong>Mentors:</strong> Prof. Srinath Sridhar, Angela Xing</div>
+        <div class="project-subtitle">Laboratory for Engineering Man/Machine Systems (LEMS), Brown University</div>
+        <div class="mentors"><strong>Mentors:</strong> Prof. Benjamin Kimia, Chiang-Heng Chien (Ph.D. Student)</div>
         <div class="project-content">
           <ul>
-            <li>Collect visuotactile dataset on single-hand and bimanual manipulation of deformable objects.</li>
-            <li>3D print and assemble UMI gripper; integrate tactile sensors into the Brown Interaction Capture System (BrICS).</li>
-            <li>Implement deformable 3D Gaussian Splatting reconstruction for ground truth particle position and velocity.</li>
+            <li>Focused on the theoretical, algorithmic, and engineering foundations of reconstructing 3D structures
+              from multiple 2D images.</li>
+            <li>Focus on reconstructing 3D scenes from multiple camera views, addressing mathematical and computational
+              challenges.</li>
+            <li>Cover camera models, including intrinsic and extrinsic parameters.</li>
+            <li>Perform camera calibration to relate 3D world coordinates to 2D image coordinates.</li>
+            <li>Apply epipolar geometry and compute essential/fundamental matrices for relating multiple views.</li>
+            <li>Estimate relative camera poses between views.</li>
+            <li>Use triangulation methods to recover 3D point positions from corresponding 2D points.</li>
+            <li>Employ optimization techniques to improve reconstruction accuracy and robustness.</li>
           </ul>
         </div>
       </div>
 
-      <!-- Project 3 -->
+      <!-- Research 2: Radiance Fields -->
       <div class="project-item">
         <div class="project-header">
-          <div class="project-title">Development of AI Physics Game using RL & PINNs</div>
-          <div class="project-date">Sept 2025 – Present</div>
+          <div class="project-title">Radiance Fields for 3D Computer Vision and Artificial Intelligence</div>
+          <div class="project-date">05/2025 – Current</div>
         </div>
-        <div class="project-subtitle">Brown University Physics Department</div>
+        <div class="project-subtitle">Brown Visual Computing and Interactive 3D Vision and Learning Lab, Brown
+          University</div>
+        <div class="mentors"><strong>Mentors:</strong> Prof. Srinath Sridhar, Research Assistant Angela Xing</div>
+        <div class="project-content">
+          <ul>
+            <li>Collect visuotactile dataset on single-hand and bimanual manipulation of deformable objects.</li>
+            <li>3D print, assemble UMI gripper and integrate tactile sensors into the Brown Interaction Capture System
+              (BrICS).</li>
+            <li>Implement deformable 3D gaussian splatting reconstruction for ground truth particle position and
+              velocity.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="card" data-reveal>
+      <h2>Projects</h2>
+
+      <!-- Project 1: Manometry -->
+      <div class="project-item">
+        <div class="project-header">
+          <div class="project-title">Esophageal Manometry Redesign</div>
+          <div class="project-date">09/2025 – Current</div>
+        </div>
+        <div class="project-subtitle">Brown University, RISD University</div>
+        <div class="mentors"><strong>Mentors:</strong> Dr. Celinda Kofron (Academic Advisor), Dr. Wai-Kit Lo, M.D
+          (Clinical Advisor)</div>
+        <div class="project-content">
+          <p>Co‑leading a year‑long effort to convert Redesigning High Resolution Esophageal Manometry (HRM) into a
+            patient‑friendly, clinically robust device through new sensing/form factors, embedded electronics, and
+            clinician‑centric software, validated against today’s standard of care. Scope spans requirements capture,
+            prototyping, UX/human‑factors testing, manufacturability, hospital integration, and IP planning for a
+            functioning medical device prototype.</p>
+        </div>
+      </div>
+
+      <!-- Project 2: AI Physics Game -->
+      <div class="project-item">
+        <div class="project-header">
+          <div class="project-title">Development of AI Physics Game using Reinforcement Machine Learning and
+            Physics-Informed Neural Nets</div>
+          <div class="project-date">Sept 2025 – Current</div>
+        </div>
+        <div class="project-subtitle">Brown University</div>
         <div class="mentors"><strong>Mentors:</strong> Prof. Gaitskell</div>
         <div class="project-content">
           <ul>
-            <li>Refine black-hole orbital simulation defining states, actions, and rewards for RL agents.</li>
-            <li>Implement Reinforcement Learning agents to maintain stable orbits avoiding black hole boundaries.</li>
+            <li>Refine black-hole orbital simulation defining states, actions, and rewards.</li>
+            <li>Implement RL agents to maintain stable orbits avoiding the black hole and boundaries.</li>
             <li>Develop multi-agent competitive environment with gravitational interactions.</li>
-            <li>Optimize RL algorithms and explore advanced physics models with neural policy adaptations.</li>
+            <li>Optimize RL algorithms for better robustness and efficiency.</li>
+            <li>Explore advanced physics models and neural policy adaptations.</li>
           </ul>
         </div>
       </div>
@@ -130,7 +144,7 @@
     <section id="awards" class="card" data-reveal>
       <h2>Awards & Fellowships</h2>
       <ul>
-         <li><strong>Undergraduate Teaching and Research SPRINT Fellowship ($2500)</strong></li>
+        <li><strong>2 x Undergraduate Teaching and Research SPRINT Fellowship</strong></li>
       </ul>
     </section>
 
@@ -155,7 +169,7 @@
         <div>
           <h3>Languages & Interests</h3>
           <p><strong>Languages:</strong> English, Sinhalese</p>
-          <p><strong>Interests:</strong> Chip Design, Electronics</p>
+          <p><strong>Interests:</strong> Chip Design, Electronics, Reading</p>
         </div>
       </div>
     </section>
@@ -163,8 +177,17 @@
     <section id="publications" class="card" data-reveal>
       <h2>Publications</h2>
       <ul>
-        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of Emerging Investigators (2023).</li>
+        <li>Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of
+          Emerging Investigators (2023).</li>
       </ul>
+    </section>
+
+    <section id="education" class="card" data-reveal>
+      <h2>Education</h2>
+      <p><strong>Brown University</strong> — Sc.B. Computer Engineering (ABET) & Applied Mathematics, Aug 2023–May 2027
+        (GPA: 3.9/4.0). Relevant: Quantum Mechanics, ML, Computational Mathematics, Deep Learning, Computer Vision.</p>
+      <p><strong>Colombo International School</strong> — Graduated Aug 2023 (A*/A-levels: 4×A*, IGCSE 10×A*). Awards: 2×
+        International Scholars with Honors, 2× Pearson Edexcel Excellence Awards.</p>
     </section>
 
     <section id="contact" class="card" data-reveal>
@@ -183,10 +206,11 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target)}});
-    },{threshold:0.1});
-    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
   </script>
 </body>
+
 </html>
