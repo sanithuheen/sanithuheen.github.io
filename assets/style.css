@@ -87,7 +87,6 @@ h3,
   font-weight: 600;
   color: #444;
   text-transform: none;
-  /* User snippet had it capitalized, but mixed case looks better for sentences. Following snippet: uppercase class applied. */
 }
 
 .meta {
@@ -297,7 +296,6 @@ h3,
 
   .project-date {
     order: -1;
-    /* Move date above title on mobile if desired, or keep structure */
     margin-bottom: 4px;
   }
 
