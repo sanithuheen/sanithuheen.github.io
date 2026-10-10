@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="avatar-wrap" data-reveal>
-        <img class="avatar" id="profileImage" src="assets/Profile_web.png" alt="Sanithu Heengama" />
+        <img class="avatar" id="profileImage" src="assets/Sanuthu_Heengama_Pic_2.jpg" alt="Sanithu Heengama" />
       </div>
       <div>
         <h1 class="name">Sanithu D. Heengama</h1>
@@ -45,7 +45,7 @@
   <main class="container">
     <section id="about" class="card" data-reveal>
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering with a focus on 3D computer vision, machine learning, and biomedical applications. I am a research student in the <strong>Interactive 3D Vision & Learning Lab (IVL)</strong>, <strong>Brown Visual Computing Lab</strong>, and the <strong>Laboratory for Engineering Man/Machine Systems (LEMS)</strong>.</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering with a focus on 3D computer vision, machine learning, and biomedical applications. I am a research student in the Interactive 3D Vision & Learning Lab (IVL), Brown Visual Computing Lab, and the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
       <p>My research interests span computer vision, 3D reconstruction, AI/ML systems, medical device innovation, and human-computer interaction. I'm passionate about translating research insights into real-world applications that improve healthcare and advance robotic perception.</p>
     </section>
 
@@ -216,11 +216,17 @@
       <h2>Publications & Preprints</h2>
       <ul>
         <li>
-          Heengama, S. (2026). "Word-Specific Repetition Priming Drives Character-Level Language Intrusion in Quantized Reasoning Models." 
+          Heengama, S. (2026). "Word-Specific Repetition Priming Sustains Character-Level Language Intrusion in Quantized Reasoning Models." 
           <a href="https://doi.org/10.5281/zenodo.22108468" target="_blank">https://doi.org/10.5281/zenodo.22108468</a>
         </li>
         <li>
-          Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring system," <em>Journal of Emerging Investigators</em> (2023).
+          Heengama, S., Richards, J., & Chong, I. (2026). "Humanness without loss of structure: Ensembling ProteinMPNN with AbLang in the RFdiffusion antibody pipeline." (Manuscript)
+        </li>
+        <li>
+          Heengama, S., Chien, C.-H., Schulz, A., & Kimia, B.B. "Reproducible, Precision-Recall Controlled Surface Reconstruction by Curve-Based Lofting and Occlusion Reasoning." (Manuscript in preparation)
+        </li>
+        <li>
+          Heengama, S. “A Cost-Effective IoT-Based Intelligent Indoor Air Quality Monitor.” <em>Journal of Emerging Investigators</em>, JEI-23-024R4 (first author, 2023). <a href="https://doi.org/10.59720/23-024" target="_blank">https://doi.org/10.59720/23-024</a>
         </li>
       </ul>
     </section>
@@ -263,7 +269,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const profileImages = [
-      'assets/Profile_web.png',
+      'assets/Sanuthu_Heengama_Pic_2.jpg',
       'assets/Profile_web_2.png'
     ];
 
@@ -276,7 +282,6 @@
     function rotateProfileImage() {
       const newSrc = getRandomProfileImage();
       
-      // Only rotate if it's different from current
       if (newSrc !== profileImage.src) {
         profileImage.style.opacity = '0';
         
@@ -287,13 +292,9 @@
       }
     }
 
-    // Set initial random image with delay
     setTimeout(() => {
       rotateProfileImage();
     }, 100);
-
-    // Optionally: rotate again every 5 seconds if user stays on page (uncomment if desired)
-    // setInterval(rotateProfileImage, 5000);
 
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
