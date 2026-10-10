@@ -45,8 +45,8 @@
   <main class="container">
     <section id="about" class="card" data-reveal>
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering with a focus on 3D computer vision, machine learning, and biomedical applications. I am a research student in the Interactive 3D Vision & Learning Lab (IVL), Brown Visual Computing Lab, and the Laboratory for Engineering Man/Machine Systems (LEMS).</p>
-      <p>My research interests span computer vision, 3D reconstruction, AI/ML systems, medical device innovation, and human-computer interaction. I'm passionate about translating research insights into real-world applications that improve healthcare and advance robotic perception.</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering with a focus on 3D computer vision, machine learning, and biomedical applications. I am a research student [...]
+      <p>My research interests span computer vision, 3D reconstruction, AI/ML systems, medical device innovation, and human-computer interaction. I'm passionate about translating research insights[...]
     </section>
 
     <section id="research" class="card" data-reveal>
@@ -88,7 +88,7 @@
         <div class="mentors"><strong>Mentor:</strong> Prof. J.J. Trey Crisco III</div>
         <div class="project-content">
           <ul>
-            <li>Extended and validated open-source 3D Slicer tools (SlicerAutoscoperM, Hierarchical 3D Registration) for markerless in vivo skeletal kinematic tracking from biplane videoradiography.</li>
+            <li>Extended and validated open-source 3D Slicer tools (SlicerAutoscoperM, Hierarchical 3D Registration) for markerless in vivo skeletal kinematic tracking from biplane videoradiograph[...]
             <li>Assessed tracking accuracy across multiple skeletal structures and joint implants using Bland-Altman statistical analysis benchmarked against marker-based methods.</li>
             <li>Applied multi-view 3D reconstruction and camera calibration principles to biplane radiographic pose estimation workflows.</li>
             <li>Collaborated with a multi-institutional research consortium (Brown, Mayo Clinic, Kitware) supporting global adoption of open-source musculoskeletal tracking software.</li>
@@ -232,10 +232,10 @@
           Heengama, S., Richards, J., & Chong, I. (2026). "Humanness without loss of structure: Ensembling ProteinMPNN with AbLang in the RFdiffusion antibody pipeline." (Manuscript)
         </li>
         <li>
-          Heengama, S., Chien, C.-H., Schulz, A., & Kimia, B.B. "Reproducible, Precision-Recall Controlled Surface Reconstruction by Curve-Based Lofting and Occlusion Reasoning." (Manuscript in preparation)
+          Heengama, S., Chien, C.-H., Schulz, A., & Kimia, B.B. "Reproducible, Precision-Recall Controlled Surface Reconstruction by Curve-Based Lofting and Occlusion Reasoning." (Manuscript in p[...]
         </li>
         <li>
-          Heengama, S. "A Cost-Effective IoT-Based Intelligent Indoor Air Quality Monitor." <em>Journal of Emerging Investigators</em>, JEI-23-024R4 (first author, 2023). <a href="https://doi.org/10.5281/zenodo.3239431" target="_blank">https://doi.org/10.5281/zenodo.3239431</a>
+          Heengama, S. "A Cost-Effective IoT-Based Intelligent Indoor Air Quality Monitor." <em>Journal of Emerging Investigators</em>, JEI-23-024R4 (first author, 2023). <a href="https://doi.org[...]
         </li>
       </ul>
     </section>
@@ -250,7 +250,7 @@
       <p><strong>Colombo International School</strong></p>
       <ul>
         <li>Graduated Aug 2023</li>
-        <li>A-Levels: 4× A* </li>
+        <li>A-Levels: 4× A* (2021)</li>
         <li>IGCSE: 10× A*</li>
         <li>GPA: 4.0/4.0</li>
       </ul>
@@ -258,21 +258,25 @@
 
     <section id="contact" class="card" data-reveal>
       <h2>Contact & Links</h2>
-      <p>Collaborations & Inquiries: <span class="email-plain">sanithu_heengama@brown.edu</span></p>
-      <div style="margin-top: 20px;">
-        <div class="social-links">
-          <a href="https://github.com/sanithuheen" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://scholar.google.com/citations?user=YOUR_ID" class="social-link" title="Google Scholar"><i class="fab fa-google"></i></a>
-          <a href="https://orcid.org/YOUR_ORCID_ID" class="social-link" title="ORCID"><i class="fab fa-orcid"></i></a>
-        </div>
-        <a class="btn" href="https://github.com/sanithuheen" target="_blank">View GitHub</a>
+      <p>Collaborations & Inquiries: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
+      
+      <div class="contact-links" style="margin-top: 20px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+        <a class="btn" href="https://github.com/sanithuheen" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a class="btn" href="https://scholar.google.com/citations?hl=en&user=tO_ezy0AAAAJ" target="_blank" title="Google Scholar">
+          <i class="fab fa-google"></i> Google Scholar
+        </a>
+        <a class="btn" href="https://orcid.org/0009-0007-6651-8717" target="_blank" title="ORCID">
+          <i class="fab fa-orcid"></i> ORCID
+        </a>
         <a class="btn btn-outline" href="assets/ML_CompEng_EE_Grad_CV_Heengama.pdf" download>Download CV (PDF)</a>
       </div>
     </section>
 
     <section id="acknowledgements" class="card" data-reveal>
       <h2>Acknowledgements</h2>
-      <p>I am grateful to my collaborators, co-authors, advisors, and mentors for their support and guidance.</p>
+      <p>My intrepid collaborators and co-authors.</p>
     </section>
   </main>
 
@@ -286,6 +290,35 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const profileImages = [
+      'assets/Sanuthu_Heengama_Pic_2.jpg',
+      'assets/Profile_web.png',
+      'assets/SH_Profile.png'
+    ];
+
+    const profileImage = document.getElementById('profileImage');
+
+    function getRandomProfileImage() {
+      return profileImages[Math.floor(Math.random() * profileImages.length)];
+    }
+
+    function rotateProfileImage() {
+      const newSrc = getRandomProfileImage();
+
+      if (newSrc !== profileImage.src) {
+        profileImage.style.opacity = '0';
+
+        setTimeout(() => {
+          profileImage.src = newSrc;
+          profileImage.style.opacity = '1';
+        }, 300);
+      }
+    }
+
+    setTimeout(() => {
+      rotateProfileImage();
+    }, 100);
 
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
