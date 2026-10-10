@@ -151,14 +151,20 @@ ol {
   text-transform: uppercase;
 }
 
-.meta a {
-  color: #fff;
+.meta a,
+.meta a i,
+.social-icon,
+.social-icon i {
+  color: #111111 !important;
   text-decoration: none;
-  opacity: 0.95;
+  opacity: 1;
 }
 
-.meta a:hover {
-  color: #fff;
+.meta a:hover,
+.meta a:hover i,
+.social-icon:hover,
+.social-icon:hover i {
+  color: #111111 !important;
   opacity: 1;
 }
 
