@@ -267,12 +267,33 @@
       'assets/Profile_web_2.png'
     ];
 
+    const profileImage = document.getElementById('profileImage');
+
     function getRandomProfileImage() {
       return profileImages[Math.floor(Math.random() * profileImages.length)];
     }
 
-    const profileImage = document.getElementById('profileImage');
-    profileImage.src = getRandomProfileImage();
+    function rotateProfileImage() {
+      const newSrc = getRandomProfileImage();
+      
+      // Only rotate if it's different from current
+      if (newSrc !== profileImage.src) {
+        profileImage.style.opacity = '0';
+        
+        setTimeout(() => {
+          profileImage.src = newSrc;
+          profileImage.style.opacity = '1';
+        }, 300);
+      }
+    }
+
+    // Set initial random image with delay
+    setTimeout(() => {
+      rotateProfileImage();
+    }, 100);
+
+    // Optionally: rotate again every 5 seconds if user stays on page (uncomment if desired)
+    // setInterval(rotateProfileImage, 5000);
 
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
