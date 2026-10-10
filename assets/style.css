@@ -63,13 +63,6 @@ p,
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-p:last-child,
-ul:last-child,
-ol:last-child {
-  margin-bottom: 0;
 }
 
 .tagline,
@@ -247,14 +240,6 @@ main.container {
   padding-bottom: 8px;
   border-bottom: 2px solid var(--accent);
   font-size: clamp(1.5rem, 2.8vw, 2rem);
-}
-
-.card > p {
-  margin-bottom: 1rem;
-}
-
-.card > p:last-of-type {
-  margin-bottom: 0;
 }
 
 .project-item {
