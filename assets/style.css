@@ -43,6 +43,31 @@ a {
   color: inherit;
 }
 
+.card p a,
+.card li a {
+  color: var(--accent);
+}
+
+.card a.btn {
+  color: white;
+}
+
+.card a.btn-outline {
+  color: var(--accent);
+}
+
+.card a.btn-outline:hover {
+  color: var(--accent-dark);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+  margin-top: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -474,9 +499,8 @@ main.container {
     order: -1;
   }
 
-  .btn {
-    width: 100%;
+  .contact-links .btn {
+    flex: 1 1 100%;
     text-align: center;
-    margin: 0 0 10px;
   }
 }
