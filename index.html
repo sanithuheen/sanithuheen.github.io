@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="avatar-wrap" data-reveal>
-        <img class="avatar" src="assets/Profile_web.png" alt="Sanithu Heengama" />
+        <img class="avatar" id="profileImage" src="assets/Profile_web.png" alt="Sanithu Heengama" />
       </div>
       <div>
         <h1 class="name">Sanithu D. Heengama</h1>
@@ -34,6 +34,7 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#projects">Projects</a>
+      <a href="#awards">Awards</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#publications">Publications</a>
@@ -44,130 +45,103 @@
   <main class="container">
     <section id="about" class="card" data-reveal>
       <h2>About</h2>
-      <p>I am an undergraduate student at Brown University studying Computer Engineering. I am a
-        research student in the Brown Visual Computing and Interactive 3D Vision and Learning Lab, as well as the Laboratory
-        for Engineering Man/Machine Systems (LEMS).</p>
+      <p>I am an undergraduate student at Brown University studying Computer Engineering with a focus on 3D computer vision, machine learning, and biomedical applications. I am a research student in the <strong>Interactive 3D Vision & Learning Lab (IVL)</strong>, <strong>Brown Visual Computing Lab</strong>, and the <strong>Laboratory for Engineering Man/Machine Systems (LEMS)</strong>.</p>
+      <p>My research interests span computer vision, 3D reconstruction, AI/ML systems, medical device innovation, and human-computer interaction. I'm passionate about translating research insights into real-world applications that improve healthcare and advance robotic perception.</p>
     </section>
 
-    <!-- RESEARCH SECTION -->
     <section id="research" class="card" data-reveal>
       <h2>Research</h2>
 
-      <!-- Research 1: 3D from Multi-view -->
       <div class="project-item">
         <div class="project-header">
-          <div class="project-title">3D from Multi-view and Sensors</div>
+          <div class="project-title">3D Reconstruction from Multi-view and Sensor Fusion</div>
           <div class="project-date">08/2025 – Current</div>
         </div>
         <div class="project-subtitle">Laboratory for Engineering Man/Machine Systems (LEMS), Brown University</div>
         <div class="mentors"><strong>Mentors:</strong> Prof. Benjamin Kimia, Chiang-Heng Chien (Ph.D. Candidate)</div>
         <div class="project-content">
           <ul>
-            <li>Focused on the theoretical, algorithmic, and engineering foundations of reconstructing 3D structures
-              from multiple 2D images.</li>
-            <li>Focus on reconstructing 3D scenes from multiple camera views, addressing mathematical and computational
-              challenges.</li>
-            <li>Cover camera models, including intrinsic and extrinsic parameters.</li>
-            <li>Perform camera calibration to relate 3D world coordinates to 2D image coordinates.</li>
-            <li>Apply epipolar geometry and compute essential/fundamental matrices for relating multiple views.</li>
-            <li>Estimate relative camera poses between views.</li>
-            <li>Use triangulation methods to recover 3D point positions from corresponding 2D points.</li>
-            <li>Employ optimization techniques to improve reconstruction accuracy and robustness.</li>
+            <li>Studying theoretical, algorithmic, and engineering foundations of 3D structure reconstruction from multiple 2D images.</li>
+            <li>Implementing camera calibration to relate 3D world coordinates to 2D image coordinates.</li>
+            <li>Applying epipolar geometry and computing essential/fundamental matrices for multi-view geometry.</li>
+            <li>Estimating relative camera poses and performing triangulation for 3D point recovery.</li>
+            <li>Leveraging optimization techniques to improve reconstruction accuracy and robustness.</li>
           </ul>
         </div>
       </div>
- <!-- Research 2: Utilizing 3D Slicer for Musculoskeletal Joint and Implant Tracking -->
+
       <div class="project-item">
         <div class="project-header">
-          <div class="project-title">Utilizing 3D Slicer for Musculoskeletal Joint and Implant Tracking</div>
+          <div class="project-title">Markerless Skeletal Kinematic Tracking using 3D Slicer</div>
           <div class="project-date">05/2025 – Current</div>
         </div>
-        <div class="project-subtitle">Biomedical Engineering and The Warren Alpert Medical School, Brown
-          University</div>
-        <div class="mentors"><strong>Mentors:</strong> Prof. J.J. Trey Crisco III</div>
+        <div class="project-subtitle">Biomedical Engineering & Warren Alpert Medical School, Brown University</div>
+        <div class="mentors"><strong>Mentor:</strong> Prof. J.J. Trey Crisco III</div>
         <div class="project-content">
           <ul>
-            <li>Extended and validated open-source 3D Slicer tools (SlicerAutoscoperM, Hierarchical 3D Registration) for markerless in vivo skeletal kinematic tracking from biplane videoradiography and 3DCT/4DCT imaging</li>
-            <li>Assessed tracking accuracy across multiple skeletal structures and joint implants using Bland-Altman statistical analysis benchmarked against marker-based methods</li>
-            <li>Applied multi-view 3D reconstruction and camera calibration principles to biplane radiographic pose estimation workflows</li>
-            <li>Collaborated with a multi-institutional research consortium (Brown, Mayo Clinic, Kitware) supporting global adoption of open-source musculoskeletal tracking software</li>
+            <li>Extended and validated open-source 3D Slicer tools (SlicerAutoscoperM, Hierarchical 3D Registration) for markerless in vivo skeletal kinematic tracking from biplane videoradiography.</li>
+            <li>Assessed tracking accuracy across multiple skeletal structures and joint implants using Bland-Altman statistical analysis benchmarked against marker-based methods.</li>
+            <li>Applied multi-view 3D reconstruction and camera calibration principles to biplane radiographic pose estimation workflows.</li>
+            <li>Collaborated with a multi-institutional research consortium (Brown, Mayo Clinic, Kitware) supporting global adoption of open-source musculoskeletal tracking software.</li>
           </ul>
         </div>
       </div>
-    <!-- Research 3: Radiance Fields for 3D Computer Vision and Artificial Intelligence-->
+
       <div class="project-item">
         <div class="project-header">
-          <div class="project-title">Radiance Fields for 3D Computer Vision and Artificial Intelligence</div>
-          <div class="project-date">08/2025 – 01 /2026</div>
+          <div class="project-title">Deformable 3D Reconstruction and Tactile Perception in Manipulation</div>
+          <div class="project-date">08/2025 – 01/2026</div>
         </div>
         <div class="project-subtitle">Interactive 3D Vision & Learning Lab (IVL), Brown University</div>
         <div class="mentors"><strong>Mentors:</strong> Prof. Srinath Sridhar, Research Assistant Angela Xing</div>
         <div class="project-content">
           <ul>
-            <li>Collect visuotactile dataset on single-hand and bimanual manipulation of deformable objects.</li>
-            <li>3D print, assemble UMI gripper and integrate tactile sensors into the Brown Interaction Capture System (BrICS).</li>
-            <li>Implement deformable 3D gaussian splatting reconstruction for ground truth particle position and velocity.</li>
-            <li>Perform camera calibration to relate 3D world coordinates to 2D image coordinates.</li>
+            <li>Collected visuotactile dataset on single-hand and bimanual manipulation of deformable objects using the Brown Interaction Capture System (BrICS).</li>
+            <li>Designed and fabricated UMI gripper with integrated tactile sensors for robotic manipulation studies.</li>
+            <li>Implemented deformable 3D Gaussian splatting reconstruction for ground truth particle tracking in dynamic scenes.</li>
+            <li>Applied advanced camera calibration techniques for accurate spatial-temporal reconstruction.</li>
           </ul>
         </div>
       </div>
     </section>
-    <!-- PROJECTS SECTION -->
+
     <section id="projects" class="card" data-reveal>
       <h2>Projects</h2>
 
-      <!-- Project 1: Manometry -->
       <div class="project-item">
         <div class="project-header">
-          <div class="project-title">Esophageal Manometry Redesign</div>
+          <div class="project-title">High-Resolution Esophageal Manometry Redesign</div>
           <div class="project-date">09/2025 – Current</div>
         </div>
-        <div class="project-subtitle">Brown University, RISD University</div>
-        <div class="mentors"><strong>Mentors:</strong> Dr. Celinda Kofron (Academic Advisor), Dr. Wai-Kit Lo, M.D
-          (Clinical Advisor)</div>
+        <div class="project-subtitle">Brown University & RISD Collaborative Design Project</div>
+        <div class="mentors"><strong>Advisors:</strong> Dr. Celinda Kofron (Academic), Dr. Wai-Kit Lo, M.D (Clinical)</div>
         <div class="project-content">
-          <p>Co‑leading a year‑long effort to convert Redesigning High Resolution Esophageal Manometry (HRM) into a
-            patient‑friendly, clinically robust device through new sensing/form factors, embedded electronics, and
-            clinician‑centric software, validated against today’s standard of care. Scope spans requirements capture,
-            prototyping, UX/human‑factors testing, manufacturability, hospital integration, and IP planning for a
-            functioning medical device prototype.</p>
-
-          <!-- Project Images -->
-          <div class="project-gallery">
-            <img src="assets/manometry_diagram_1.png" alt="Manometry Diagram" class="zoom-img">
-            <img src="assets/manometry_comparison.png" alt="Manometry Comparison" class="zoom-img">
-            <img src="assets/manometry_catheter.png" alt="Manometry Catheter" class="zoom-img">
-            <img src="assets/manometry_plots.png" alt="Manometry Plots" class="zoom-img">
-            <img src="assets/manometry_specs.png" alt="Manometry Specifications" class="zoom-img">
-          </div>
+          <p>Co-leading a year-long capstone effort to redesign High-Resolution Esophageal Manometry (HRM) into a patient-friendly, clinically robust medical device. The project encompasses:</p>
+          <ul>
+            <li><strong>Sensing Innovation:</strong> Novel sensor form factors and biocompatible materials for improved patient comfort.</li>
+            <li><strong>Electronics Design:</strong> Embedded systems and signal processing for real-time pressure data acquisition.</li>
+            <li><strong>Software Development:</strong> Clinician-centric interface for data visualization and analysis.</li>
+            <li><strong>Validation & Manufacturability:</strong> Clinical validation against industry standards and design for manufacturability.</li>
+            <li><strong>IP Strategy:</strong> Patent planning and hospital integration pathways.</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Project 2: AI Physics Game -->
       <div class="project-item">
         <div class="project-header">
-          <div class="project-title">Development of an AI Physics Game using Reinforcement Machine Learning and
-            Physics-Informed Neural Nets</div>
-          <div class="project-date">Sept 2025 – Jan 2026 </div>
+          <div class="project-title">AI Physics Game: Reinforcement Learning & Physics-Informed Neural Networks</div>
+          <div class="project-date">Sept 2025 – Jan 2026</div>
         </div>
-        <div class="project-subtitle">Brown University</div>
-        <div class="mentors"><strong>Mentors:</strong> Prof. Gaitskell</div>
+        <div class="project-subtitle">Brown University — Advanced AI Systems Project</div>
+        <div class="mentors"><strong>Mentor:</strong> Prof. Gaitskell</div>
         <div class="project-content">
           <ul>
-            <li> Refine black-hole orbital simulation, defining states, actions, and rewards.</li>
-            <li> Implement RL agents to maintain stable orbits, avoiding the black hole and boundaries.</li>
-            <li> Develop a multi-agent competitive environment with gravitational interactions.</li>
-            <li> Optimize RL algorithms for better robustness and efficiency.</li>
-            <li> Explore advanced physics models and neural policy adaptations.</li>
+            <li>Designed and implemented a black-hole orbital simulation environment with custom state/action/reward spaces.</li>
+            <li>Trained RL agents using PPO and DQN algorithms to maintain stable orbits while avoiding collision and boundaries.</li>
+            <li>Developed multi-agent competitive environments with realistic gravitational interactions.</li>
+            <li>Integrated Physics-Informed Neural Networks (PINNs) to enhance model robustness and sample efficiency.</li>
+            <li>Optimized training pipeline for convergence and generalization across diverse scenarios.</li>
           </ul>
-
-          <!-- Project Images -->
-          <div class="project-gallery">
-            <img src="assets/ai_physics_game_loop.png" alt="AI Physics Game Loop" class="zoom-img">
-            <img src="assets/ai_physics_model_architecture.png" alt="Model Architecture" class="zoom-img">
-            <img src="assets/ai_physics_reward_function.png" alt="Reward Function" class="zoom-img">
-            <img src="assets/ai_physics_results.png" alt="Results" class="zoom-img">
-          </div>
         </div>
       </div>
     </section>
@@ -175,25 +149,39 @@
     <section id="awards" class="card" data-reveal>
       <h2>Awards & Fellowships</h2>
       <ul>
-        <li><strong> 3 x UTRA Fellow | Research Award </strong></li>
-       <li><strong>  Hong Kong International Mathematical Olympiad (HKIMO) Global Final- Aug 2023- WORLD STAR and Bronze Medal</strong></li>
-       <li><strong>  2 x International Scholars with Honors, 2× Pearson Edexcel Excellence Awards</strong></li>
+        <li><strong>3× UTRA Fellow</strong> — Brown University Undergraduate Teaching & Research Awards (2025–2026)</li>
+        <li><strong>Hong Kong International Mathematical Olympiad (HKIMO) Global Final</strong> — August 2023, World Star & Bronze Medal</li>
+        <li><strong>2× International Scholars with Honors</strong> — Colombo International School</li>
+        <li><strong>2× Pearson Edexcel Excellence Awards</strong> — A-Level and IGCSE Academic Excellence</li>
       </ul>
     </section>
 
     <section id="experience" class="card" data-reveal>
-      <h2>Work & Teaching</h2>
+      <h2>Work & Teaching Experience</h2>
       <ul>
-        <li><strong>Research & SWE Intern</strong> — July 2026 – Present, Brown University Health (www.brownhealth.org)/ Rhode Island Hospital</li>
-        <li><strong>UTRA Research Fellow</strong> — May 2025–Present, Brown University.</li>
-        <li><strong>Engineering TA/Grader</strong> — Aug 2024–May 2025, Brown University.
+        <li><strong>Research & Software Engineering Intern</strong> — July 2026 – Present
           <ul>
-            <li>Work as one of the 24 undergraduate teaching assistants for the class ENGN32/40</li>
-            <li>Engaged in course development, improved its webpage, Github repository, and Gradescope autograders,
-              and assignment grading, and attended TA Hours and ED Hours for projects</li>
+            <li>Brown University Health (www.brownhealth.org) & Rhode Island Hospital</li>
+            <li>Focus: Healthcare IT systems and clinical research applications</li>
           </ul>
         </li>
-        <li><strong>Engineering Research Intern</strong> — June–Aug 2024</li>
+        <li><strong>UTRA Research Fellow</strong> — May 2025 – Present
+          <ul>
+            <li>Brown University Undergraduate Research Support</li>
+          </ul>
+        </li>
+        <li><strong>Engineering TA & Grader</strong> — Aug 2024 – May 2025
+          <ul>
+            <li>Course: ENGN32/40 (Signals & Systems for Engineering)</li>
+            <li>Responsibilities: Course development, GitHub repository management, Gradescope autograder design, assignment grading, office hours support</li>
+            <li>One of 24 undergraduate TAs for 150+ students</li>
+          </ul>
+        </li>
+        <li><strong>Engineering Research Intern</strong> — June – Aug 2024
+          <ul>
+            <li>Summer research in computer vision and 3D reconstruction</li>
+          </ul>
+        </li>
       </ul>
     </section>
 
@@ -201,56 +189,72 @@
       <h2>Technical Skills & Interests</h2>
       <div class="skills-grid">
         <div>
-          <h3>Software & Programming</h3>
-          <p><strong>Expert:</strong> Python, C++, MATLAB, PyTorch, PyTorch Lightning, scikit-learn, NumPy, SciPy</p>
-          <p><strong>Fluent:</strong> Java, TypeScript, JavaScript, React, Fusion 360, SolidWorks, Golang</p>
-          <p><strong>Proficient:</strong> HTML, CSS, C, Pyret, Qiskit, Pennylane</p>
+          <h3>AI/ML & Computer Vision</h3>
+          <p><strong>Expert:</strong> PyTorch, PyTorch Lightning, scikit-learn, NumPy, SciPy, OpenCV, 3D reconstruction</p>
+          <p><strong>Proficient:</strong> Qiskit, PennyLane, TensorFlow</p>
         </div>
         <div>
-          <h3>Languages & Interests</h3>
+          <h3>Programming Languages</h3>
+          <p><strong>Expert:</strong> Python, C++, MATLAB</p>
+          <p><strong>Fluent:</strong> Java, TypeScript, JavaScript, Golang</p>
+          <p><strong>Proficient:</strong> HTML, CSS, C, Pyret</p>
+        </div>
+        <div>
+          <h3>Design & Simulation</h3>
+          <p><strong>Expert:</strong> Fusion 360, SolidWorks</p>
+          <p><strong>Proficient:</strong> COMSOL, MATLAB Simulink, CAD design for manufacturing</p>
+        </div>
+        <div>
+          <h3>Interests & Languages</h3>
+          <p><strong>Research Focus:</strong> Chip Design, Electronics, Biomedical Devices, Robotics</p>
           <p><strong>Languages:</strong> English, Sinhalese</p>
-          <p><strong>Interests:</strong> Chip Design, Electronics, Reading</p>
         </div>
       </div>
     </section>
 
     <section id="publications" class="card" data-reveal>
-      <h2>Publications</h2>
+      <h2>Publications & Preprints</h2>
       <ul>
         <li>
-          Heengama, S. (2026). Word-Specific Repetition Priming Drives Character-Level Language Intrusion in Quantized Reasoning Models. 
-          https://doi.org/10.5281/zenodo.22108468
-        </ul>
-      <ul>
+          Heengama, S. (2026). "Word-Specific Repetition Priming Drives Character-Level Language Intrusion in Quantized Reasoning Models." 
+          <a href="https://doi.org/10.5281/zenodo.22108468" target="_blank">https://doi.org/10.5281/zenodo.22108468</a>
+        </li>
         <li>
-          Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring", Journal of
-          Emerging Investigators (2023).</li>
+          Heengama, S. et al., "A cost-effective IoT-based intelligent indoor air quality monitoring system," <em>Journal of Emerging Investigators</em> (2023).
+        </li>
       </ul>
     </section>
+
     <section id="education" class="card" data-reveal>
       <h2>Education</h2>
-      <p><strong>Brown University</strong> — Sc.B. Computer Engineering (Honors), Aug 2023–May
-        2027
-        (GPA: 3.8/4.0).</p>
-      <p><strong>Colombo International School</strong> -Graduated Aug 2023 (A*, A*, A*, A* in A-levels, 2021- IGCSE 10×A*) — 
-        (GPA  4.0/4.0).</p>
+      <p><strong>Brown University</strong></p>
+      <ul>
+        <li>Sc.B. Computer Engineering (Honors Track), Aug 2023 – May 2027</li>
+        <li>GPA: 3.8/4.0</li>
+      </ul>
+      <p><strong>Colombo International School</strong></p>
+      <ul>
+        <li>Graduated Aug 2023</li>
+        <li>A-Levels: 4× A* (2021)</li>
+        <li>IGCSE: 10× A*</li>
+        <li>GPA: 4.0/4.0</li>
+      </ul>
     </section>
 
     <section id="contact" class="card" data-reveal>
-      <h2>Contact</h2>
-      <p>Collaborations: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
+      <h2>Contact & Links</h2>
+      <p>Collaborations & Inquiries: <a href="mailto:sanithu_heengama@brown.edu">sanithu_heengama@brown.edu</a></p>
       <div style="margin-top: 20px;">
-        <a class="btn" href="https://github.com/sanithuheen">View GitHub</a>
+        <a class="btn" href="https://github.com/sanithuheen" target="_blank">View GitHub</a>
         <a class="btn btn-outline" href="assets/ML_CompEng_EE_Grad_CV_Heengama.pdf" download>Download CV (PDF)</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher</div>
+    <div class="container">© <span id="year"></span> Sanithu D. Heengama — EECS Researcher & Engineer</div>
   </footer>
 
-  <!-- Lightbox for Image Zoom -->
   <div id="lightbox">
     <img src="" alt="Zoomed Image">
   </div>
@@ -258,13 +262,23 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Reveal On Scroll
+    const profileImages = [
+      'assets/Profile_web.png',
+      'assets/Profile_web_2.png'
+    ];
+
+    function getRandomProfileImage() {
+      return profileImages[Math.floor(Math.random() * profileImages.length)];
+    }
+
+    const profileImage = document.getElementById('profileImage');
+    profileImage.src = getRandomProfileImage();
+
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } });
     }, { threshold: 0.1 });
     document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
-    // Lightbox Logic
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('img');
 
